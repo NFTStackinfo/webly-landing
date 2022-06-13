@@ -11,25 +11,20 @@ public_folder: /assets
 
 collections:
   # homepage
-  - name: homepage-hero-1
-    label: Homepage Banner 1
-    folder: src/markdown/homepage-hero-1
+  - name: homepage-hero
+    label: Homepage Hero
+    folder: src/markdown/homepage-hero
     preview_path: /
     create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title, widget: hidden }
-      - { name: metaTitle, label: Meta Title }
-      - { name: metaDescription, label: Meta Description, widget: text }
-      - { name: heroHeading, label: Banner Heading }
-      - { name: heroText, label: Banner Text }
-      - { name: heroBtnPrimary, label: Banner button primary }
-      - { name: heroBtnPrimaryUrl, label: Banner button primary url }
-      - { name: heroBtnSecondary, label: Banner button secondary }
-      - { name: heroBtnSecondaryUrl, label: Banner button secondary url }
-      - { name: heroImg, label: Banner image, widget: image }
-      - { name: calculatorTitle, label: Calculator Title }
+#      - { name: title, label: Title, widget: hidden }
+#      - { name: metaTitle, label: Meta Title }
+#      - { name: metaDescription, label: Meta Description, widget: text }
+      - { name: heroHeading, label: Hero Heading }
+      - { name: heroText, label: Hero Text }
+      - { name: heroBtnText, label: Hero button text }
 
   # 404
   - name: not-found

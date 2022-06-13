@@ -43,6 +43,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `homepage-hero`,
+        path: `${__dirname}/src/markdown/homepage-hero`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `not-found`,
         path: `${__dirname}/src/markdown/not-found`,
       },
