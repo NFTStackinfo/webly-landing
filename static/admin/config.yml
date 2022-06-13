@@ -19,12 +19,10 @@ collections:
     editor:
       preview: false
     fields:
-#      - { name: title, label: Title, widget: hidden }
-#      - { name: metaTitle, label: Meta Title }
-#      - { name: metaDescription, label: Meta Description, widget: text }
-      - { name: heroHeading, label: Hero Heading }
-      - { name: heroText, label: Hero Text }
-      - { name: heroBtnText, label: Hero button text }
+      - { name: title, label: Title }
+      - { name: sectionHeading, label: Hero Heading }
+      - { name: sectionText, label: Hero Text }
+      - { name: sectionBtnText, label: Hero button text }
 
   # 404
   - name: not-found
