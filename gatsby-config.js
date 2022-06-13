@@ -36,57 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `header`,
-        path: `${__dirname}/src/markdown/header`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `footer`,
-        path: `${__dirname}/src/markdown/footer`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `terms-and-conditions`,
-        path: `${__dirname}/src/markdown/terms-and-conditions`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `privacy-policy`,
-        path: `${__dirname}/src/markdown/privacy-policy`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `contact-us`,
-        path: `${__dirname}/src/markdown/contact-us`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `contact-form`,
-        path: `${__dirname}/src/markdown/contact-form`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/src/markdown/blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `request-demo`,
-        path: `${__dirname}/src/markdown/request-demo`,
+        name: `homepage`,
+        path: `${__dirname}/src/markdown/homepage`,
       },
     },
     {
@@ -94,146 +45,6 @@ module.exports = {
       options: {
         name: `not-found`,
         path: `${__dirname}/src/markdown/not-found`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `homepage-hero-1`,
-        path: `${__dirname}/src/markdown/homepage-hero-1`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `homepage-hero-2`,
-        path: `${__dirname}/src/markdown/homepage-hero-2`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `homepage-about-section`,
-        path: `${__dirname}/src/markdown/homepage-about-section`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `info-box`,
-        path: `${__dirname}/src/markdown/info-box`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `info-block`,
-        path: `${__dirname}/src/markdown/info-block`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `info-section`,
-        path: `${__dirname}/src/markdown/info-section`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `testimonial`,
-        path: `${__dirname}/src/markdown/testimonial`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `with-pet-calculator`,
-        path: `${__dirname}/src/markdown/with-pet-calculator`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `with-no-pet-calculator`,
-        path: `${__dirname}/src/markdown/with-no-pet-calculator`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `products-hero-1`,
-        path: `${__dirname}/src/markdown/products-hero-1`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `products-hero-2`,
-        path: `${__dirname}/src/markdown/products-hero-2`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `products-hero-3`,
-        path: `${__dirname}/src/markdown/products-hero-3`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `multi-tenant-platform-section`,
-        path: `${__dirname}/src/markdown/multi-tenant-platform-section`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `landlord-tech-program-section`,
-        path: `${__dirname}/src/markdown/landlord-tech-program-section`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `about-hero`,
-        path: `${__dirname}/src/markdown/about-hero`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `about-us-section`,
-        path: `${__dirname}/src/markdown/about-us-section`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `our-products-section`,
-        path: `${__dirname}/src/markdown/our-products-section`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pricing-hero`,
-        path: `${__dirname}/src/markdown/pricing-hero`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pricing-list`,
-        path: `${__dirname}/src/markdown/pricing-list`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `faq-list`,
-        path: `${__dirname}/src/markdown/faq-list`,
       },
     },
 
@@ -286,6 +97,7 @@ module.exports = {
             },
           },
           `gatsby-remark-external-links`,
+          'gatsby-plugin-postcss',
         ],
       },
     },

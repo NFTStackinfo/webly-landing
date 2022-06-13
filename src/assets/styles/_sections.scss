@@ -1,0 +1,28 @@
+@layer components {
+  .section {
+    &-hero, &-how-it-works, &-join {
+      background-repeat: no-repeat;
+    }
+
+    &-hero {
+      background-image: url('../images/hero/left.png'),
+      url('../images/hero/right.png'),
+      radial-gradient(110.97% 359.55% at 101.01% 12.12%, #7abdf3 0%, rgba(0, 99, 216, 0.8) 50.52%, #3900db 100%);
+      background-position: left center, right top, center;
+    }
+
+    &-how-it-works {
+      background-image: url('../images/how-it-works/left.png'),
+      url('../images/how-it-works/right.png'),
+      radial-gradient(110.97% 359.55% at 101.01% 12.12%, #7abdf3 0%, rgba(0, 99, 216, 0.8) 50.52%, #3900db 100%);
+      background-position: left top, right top, center;
+    }
+
+    &-join {
+      background-image: url('../images/join/left.png'),
+      url('../images/join/right.png'),
+      radial-gradient(110.97% 359.55% at 101.01% 12.12%, #7abdf3 0%, rgba(0, 99, 216, 0.8) 50.52%, #3900db 100%);
+      background-position: left bottom, right top, center;
+    }
+  }
+}

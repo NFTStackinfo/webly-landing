@@ -8,11 +8,7 @@
 import React, { useEffect, useState } from "react"
 import { useLocation } from "@reach/router"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import Icon from "./Icon"
-import Header from "./header"
-import Footer from "./footer"
-import "../assets/styles/main.scss"
-import "../assets/styles/_fonts.scss"
+import "../assets/styles/index.scss"
 
 const Layout = ({ children, className, prodHeader }) => {
   const { pathname } = useLocation()
@@ -30,18 +26,18 @@ const Layout = ({ children, className, prodHeader }) => {
 
   return (
     <>
-      <Header pathname={pathname} sticky={sticky} prodHeader={prodHeader} />
+      {/*<Header pathname={pathname} sticky={sticky} prodHeader={prodHeader} />*/}
       <main className={className} id="top">
         {children}
       </main>
-      {!pathname.includes("/calculator") && <Footer />}
+      {/*{!pathname.includes("/calculator") && <Footer />}*/}
 
-      <button
-        onClick={() => scrollTo("#top")}
-        className={`go-top-btn ${scrollTop ? "fade-in" : ""}`}
-      >
-        <Icon color="#0D0D0D" size={36} icon="arrow-top" />
-      </button>
+      {/*<button*/}
+      {/*  onClick={() => scrollTo("#top")}*/}
+      {/*  className={`go-top-btn ${scrollTop ? "fade-in" : ""}`}*/}
+      {/*>*/}
+      {/*  <Icon color="#0D0D0D" size={36} icon="arrow-top" />*/}
+      {/*</button>*/}
     </>
   )
 }
