@@ -11,4 +11,7 @@ list:
   - itemImage: /assets/create-smart-contract.png
     itemTitle: CREATE SMART CONTRACT
     itemDescription: We support ERC 721, ERC 721A and ERC 1155
+  - itemImage: /assets/deploy-smart-contract.png
+    itemTitle: DEPLOY SMART CONTRACT
+    itemDescription: Deploy your own smart contract
 ---
