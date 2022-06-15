@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Button from './Button'
 
 function TextField({
@@ -12,13 +12,21 @@ function TextField({
                      helperText = '',
                      ...props
                    }) {
+  const inputRef = useRef(null)
+
   return (
     <div className={['text-field-group', className].join(' ')} {...props}>
-      <div className="text-field">
-        <input type={type} placeholder={placeholder} value={value} onChange={onChange}/>
+      <form className="text-field" onSubmit={e => onSubmit(e, inputRef)}>
+        <input
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          ref={inputRef}
+        />
 
-        <Button variant="primary" onClick={onSubmit}>{buttonText}</Button>
-      </div>
+        <Button variant="primary">{buttonText}</Button>
+      </form>
 
       {helperText && <span className="helper-text">{helperText}</span>}
     </div>

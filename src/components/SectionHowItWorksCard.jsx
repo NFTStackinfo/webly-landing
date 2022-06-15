@@ -1,9 +1,15 @@
 import React from 'react'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
 
 function SectionHowItWorksCard({img, title, description}) {
   return (
     <div className="card-wrapper text-center text-white max-w-[358px] grid justify-items-center">
-      <img src={img} alt={title} className="max-w-full"/>
+      <GatsbyImage
+          className="max-w-full"
+          alt={title}
+          image={getImage(img)}
+          objectFit={'contain'}
+      />
 
       <h4 className="text-s1 font-black mt-6 font-primary">{title}</h4>
 

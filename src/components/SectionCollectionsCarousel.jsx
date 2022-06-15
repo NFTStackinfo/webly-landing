@@ -1,64 +1,41 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { Carousel } from "components/UIKit"
+import React, { useState } from 'react'
+import Slider from "react-slick";
+import {useCollections} from '../fetchHooks/useCollections';
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
 
-const AboutCarousel = ({ rtl }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+const settings = {
+  dots: false,
+  infinite: true,
+  arrows: false,
+  variableWidth: true,
+  slidesToScroll: 1,
+  autoplay: true,
+  pauseOnHover: false,
+  autoplaySpeed: 0,
+  speed: 3000,
+  cssEase: "linear",
+};
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth)
-  }
+const SectionCollectionsCarousel = () => {
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-
-  const settings = useMemo(() => {
-    return {
-      dots: false,
-      infinite: true,
-      arrows: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      pauseOnHover: false,
-      speed: 1000,
-      cssEase: "linear",
-      rtl: !!rtl,
-      // responsive: [
-      //   {
-      //     breakpoint: theme.breakpoints.xl,
-      //     settings: {
-      //       slidesToShow: 3,
-      //     },
-      //   },
-      //   {
-      //     breakpoint: theme.breakpoints.sm,
-      //     settings: {
-      //       slidesToShow: 2,
-      //     },
-      //   },
-      // ],
-    }
-  }, [rtl])
-
+  const {list} = useCollections()
   return (
-    <div>
-      <Carousel settings={settings}>
-        {[...Array(4)].map((item, index) => {
-          return (
-            <div className="carousel-item" key={`carousel-${index}`}>
-              <img src={`/assets/collections/${index + 1}.png`} alt="collection" />
-            </div>
-          )
-        })}
-      </Carousel>
-    </div>
-  )
+    <>
+      <Slider {...settings}>
+        {list.map(({itemImage, itemName}, index) => (
+          <div key={index} className="pr-6">
+            <GatsbyImage
+                className="block max-w-full w-full"
+                alt={itemName}
+                image={getImage(itemImage)}
+                // title={itemName}
+                objectFit={'contain'}
+            />
+          </div>
+        ))}
+      </Slider>
+    </>
+  );
 }
 
-export default AboutCarousel
+export default SectionCollectionsCarousel

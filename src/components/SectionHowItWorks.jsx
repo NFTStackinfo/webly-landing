@@ -1,47 +1,44 @@
-import React from 'react'
-import SectionHowItWorksCard from './SectionHowItWorksCard'
-import cardImg1 from '../assets/images/how-it-works/card-1.png'
-import cardImg2 from '../assets/images/how-it-works/card-2.png'
-import cardImg3 from '../assets/images/how-it-works/card-3.png'
+import React, {forwardRef} from 'react';
+import SectionHowItWorksCard from './SectionHowItWorksCard';
+import {useHowItWorks} from '../fetchHooks/useHowItWorks';
 
-function SectionHowItWorks(props) {
+const SectionHowItWorks = forwardRef((props, ref) => {
+  const {sectionHeading, sectionText, list: howItWorksList} = useHowItWorks();
+  const asd = useHowItWorks();
+  console.log(asd);
+
   return (
-    <section className="section-how-it-works rounded-section py-30">
-      <div className="container">
-        <div className="container-sm">
-          <div className="content text-center">
-            <h2 className="text-gradient-1 font-bold font-primary">HOW IT WORKS</h2>
+      <section
+          className="section-how-it-works pt-10 mt-30 lg:mt-20 "
+          ref={ref}
+          id="section-how-it-work"
+      >
+        <div className="wrapper py-30 sm:py-20 rounded-section">
+          <div className="container">
+            <div className="container-sm">
+              <div className="content text-center">
+                <h2 className="text-gradient-1 font-bold font-primary">{sectionHeading}</h2>
 
-            <p className="mt-6">
-              Launch your NFT collection directly on your website. The entire
-              setup process of our NFT collection generator won't take more than
-              two minutes.
-            </p>
+                <p className="mt-6">{sectionText}</p>
+              </div>
+            </div>
+
+            <div
+                className="content grid grid-cols-3 gap-6 mt-8 md:gap-4 sm:grid-cols-1 sm:justify-items-center">
+              {howItWorksList.map(({itemTitle, itemDescription, itemImage}) => {
+                return (
+                    <SectionHowItWorksCard
+                        img={itemImage}
+                        title={itemTitle}
+                        description={itemDescription}
+                    />
+                );
+              })}
+            </div>
           </div>
         </div>
+      </section>
+  );
+});
 
-        <div className="content grid grid-cols-3 gap-6 mt-8">
-          <SectionHowItWorksCard
-            img={cardImg1}
-            title="CONNECT METAMASK"
-            description="Use your metamask wallet to sign in a platform"
-          />
-
-          <SectionHowItWorksCard
-            img={cardImg2}
-            title="CREATE SMART CONTRACT"
-            description="We support ERC 721, ERC 721A and ERC 1155"
-          />
-
-          <SectionHowItWorksCard
-            img={cardImg3}
-            title="DEPLOY SMART CONTRACT"
-            description="Deploy your own smart contract"
-          />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default SectionHowItWorks
+export default SectionHowItWorks;

@@ -1,8 +1,8 @@
 backend:
-#  name: git-gateway
-   name: github
-   repo: NFTStackinfo/webly-landing
-   branch: main
+  #  name: git-gateway
+  name: github
+  repo: NFTStackinfo/webly-landing
+  branch: main
 
 #publish_mode: editorial_workflow
 
@@ -10,6 +10,40 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
+  # global
+  - name: seo
+    label: For SEO
+    folder: src/markdown/seo
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+        - { name: title, label: Title }
+        - { name: metaTitle, label: Meta Title }
+        - { name: metaDescription, label: Meta Description }
+        - { name: author, label: Author }
+
+  - name: socialLinks
+    label: Social Links
+    folder: src/markdown/social-links
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+        - { name: title, label: Title }
+        - name: socialList
+          label: Social list
+          widget: list
+          fields:
+            - {
+              label: Social icon,
+              name: icon,
+              widget: select,
+              options: [ instagram, linkedin, twitter, discord ],
+            }
+            - { label: Url, name: url }
   # homepage
   - name: homepage-hero
     label: Homepage Hero
@@ -20,22 +54,98 @@ collections:
       preview: false
     fields:
       - { name: title, label: Title }
-      - { name: sectionHeading, label: Hero Heading }
+      - { name: sectionHeading, label: Hero heading }
       - { name: sectionText, label: Hero Text }
       - { name: sectionBtnText, label: Hero button text }
 
-  # 404
-  - name: not-found
-    label: Not Found
-    folder: src/markdown/not-found
+  - name: homepage-how-it-works
+    label: Homepage How It Works
+    folder: src/markdown/homepage-how-it-works
     preview_path: /
     create: true
     editor:
       preview: false
     fields:
       - { name: title, label: Title }
-      - { name: heroHeading, label: Hero heading }
-      - { name: heroText, label: Hero text, widget: text }
-      - { name: primaryBtn, label: Primary Button }
-      - { name: secondaryBtn, label: Secondary Button }
-      - { name: heroImg, label: Hero image, widget: image }
+      - { name: sectionHeading, label: Section heading }
+      - { name: sectionText, label: Section text , widget: text }
+      - name: list
+        label: How it works list
+        widget: list
+        allow_add: false
+        fields:
+          - { label: Item image, name: itemImage , widget: image }
+          - { label: Item title, name: itemTitle }
+          - { label: Item description, name: itemDescription }
+
+  - name: homepage-team
+    label: Homepage Team
+    folder: src/markdown/homepage-team
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - { name: sectionHeading, label: Section heading }
+      - name: list
+        label: Team list
+        widget: list
+#        allow_add: false
+        fields:
+          - { label: Item image, name: itemImage , widget: image }
+          - { label: Item title, name: itemTitle }
+          - { label: Item description, name: itemDescription }
+          - name: socialList
+            label: Social list
+            widget: list
+            fields:
+              - { label: Icon name, name: icon}
+              - { label: Url, name: url}
+
+  - name: homepage-join-us
+    label: Homepage Join us
+    folder: src/markdown/homepage-join-us
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - { name: sectionHeading, label: Section heading }
+      - { name: sectionText, label: Section Text }
+      - { name: sectionBtnText, label: Section button text }
+
+  - name: homepage-collections
+    label: Homepage Collections
+    folder: src/markdown/homepage-collections
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - { name: sectionHeading, label: Section heading }
+      - name: list
+        label: Collection list
+        widget: list
+        fields:
+          - { label: Project image, name: itemImage , widget: image }
+          - { label: Project name, name: itemName }
+
+
+  # 404
+#  - name: not-found
+#    label: Not Found
+#    folder: src/markdown/not-found
+#    preview_path: /
+#    create: true
+#    editor:
+#      preview: false
+#    fields:
+#      - { name: title, label: Title }
+#      - { name: heroHeading, label: Hero heading }
+#      - { name: heroText, label: Hero text, widget: text }
+#      - { name: primaryBtn, label: Primary Button }
+#      - { name: secondaryBtn, label: Secondary Button }
+#      - { name: heroImg, label: Hero image, widget: image }

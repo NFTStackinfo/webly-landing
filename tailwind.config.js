@@ -3,6 +3,68 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      xxl: {max: '1919px'},
+      lg: {max: '1199px'},
+      xl: {max: '1439px'},
+      md: {max: '991px'},
+      sm: {max: '768px'},
+      xs: {max: '359px'}
+    },
+    fontFamily: {
+      'primary': '\'Montserrat\', sans-serif',
+      'secondary': '\'Poppins\', sans-serif',
+    },
+    fontSize: {
+      h1: ['48px', {
+        lineHeight: '56px',
+        letterSpacing: '0.03em',
+      }],
+      h2: ['40px', {
+        lineHeight: '48px',
+        letterSpacing: '0.03em',
+      }],
+      h3: ['36px', {
+        lineHeight: '44px',
+        letterSpacing: '0.03em',
+      }],
+      h4: ['32px', {
+        lineHeight: '40px',
+        letterSpacing: '0.03em',
+      }],
+      h5: ['28px', {
+        lineHeight: '36px',
+        letterSpacing: '0.03em',
+      }],
+      h6: ['24px', {
+        lineHeight: '32px',
+        letterSpacing: '0.03em',
+      }],
+      s1: ['20px', {
+        lineHeight: '28px',
+        letterSpacing: '0.06em',
+      }],
+      s2: ['16px', {
+        lineHeight: '24px',
+        letterSpacing: '0.06em',
+      }],
+      body1: ['20px', {
+        lineHeight: '28px',
+        letterSpacing: '0.03em',
+      }],
+      body2: ['16px', {
+        lineHeight: '24px',
+        letterSpacing: '0.03em',
+      }],
+      body3: ['14px', {
+        lineHeight: '20px',
+        letterSpacing: '0.03em',
+      }],
+      caption: ['12px', {
+        lineHeight: '16px',
+        letterSpacing: '0.03em',
+      }]
+    },
     extend: {
       colors: {
         'neon-blue': 'rgb(35,0,137)',
@@ -18,60 +80,8 @@ module.exports = {
         'water': 'rgb(223,241,255)',
         'baker-miller-pink': 'rgb(255,143,180)',
         'waterspout': 'rgb(155,255,255)',
-      },
-      fontFamily: {
-        'primary': '\'Montserrat\', sans-serif',
-        'secondary': '\'Poppins\', sans-serif',
-      },
-      fontSize: {
-        h1: ['48px', {
-          lineHeight: '56px',
-          letterSpacing: '0.03em',
-        }],
-        h2: ['40px', {
-          lineHeight: '48px',
-          letterSpacing: '0.03em',
-        }],
-        h3: ['36px', {
-          lineHeight: '44px',
-          letterSpacing: '0.03em',
-        }],
-        h4: ['32px', {
-          lineHeight: '40px',
-          letterSpacing: '0.03em',
-        }],
-        h5: ['28px', {
-          lineHeight: '36px',
-          letterSpacing: '0.03em',
-        }],
-        h6: ['24px', {
-          lineHeight: '32px',
-          letterSpacing: '0.03em',
-        }],
-        s1: ['20px', {
-          lineHeight: '28px',
-          letterSpacing: '0.06em',
-        }],
-        s2: ['16px', {
-          lineHeight: '24px',
-          letterSpacing: '0.06em',
-        }],
-        body1: ['20px', {
-          lineHeight: '28px',
-          letterSpacing: '0.03em',
-        }],
-        body2: ['16px', {
-          lineHeight: '24px',
-          letterSpacing: '0.03em',
-        }],
-        body3: ['14px', {
-          lineHeight: '20px',
-          letterSpacing: '0.03em',
-        }],
-        caption: ['12px', {
-          lineHeight: '16px',
-          letterSpacing: '0.03em',
-        }]
+
+        'modal-overlay': 'rgba(35, 35, 35, 0.5)'
       },
       borderRadius: {
         'section': '60px'
@@ -83,17 +93,18 @@ module.exports = {
 
         'hero-left-shape': "url('../assets/hero/left.png')",
       },
-      screens: {
-        xs: {max: '359px'},
-        sm: {max: '768px'},
-        md: {max: '991px'},
-        lg: {max: '1199px'},
-        xl: {max: '1439px'},
-        xxl: {max: '1919px'}
-      },
       spacing: {
+        '72': '4.5rem',
         '30': '7.5rem',
+        '34': '8.5rem',
         '42': '10.5rem',
+        '50': '12.5rem',
+        '54': '13.5rem',
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+        'menu': 'height, background-color',
       }
     },
   },

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Pet Policies Done Right | LandlordTech`,
-    description: `Increase revenue, transparency, and tenant satisfaction with the most advanced pet policy platform on the market.`,
-    author: `UltraLabs`,
-    siteUrl: `https://landlordtech.com`,
+    title: `WEBLY`,
+    description: `Webly description`,
+    author: `Webly`,
+    siteUrl: `https://webly-landing.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://landlordtech.com",
-        sitemap: "https://landlordtech.com/sitemap.xml",
+        host: "https://webly-landing.netlify.com",
+        sitemap: "https://webly-landing.netlify.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -36,13 +36,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `homepage`,
-        path: `${__dirname}/src/markdown/homepage`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `homepage-hero`,
         path: `${__dirname}/src/markdown/homepage-hero`,
       },
@@ -50,10 +43,45 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `not-found`,
-        path: `${__dirname}/src/markdown/not-found`,
+        name: `homepage-how-it-works`,
+        path: `${__dirname}/src/markdown/homepage-how-it-works`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homepage-team`,
+        path: `${__dirname}/src/markdown/homepage-team`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homepage-collections`,
+        path: `${__dirname}/src/markdown/homepage-collections`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `social-links`,
+        path: `${__dirname}/src/markdown/social-links`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `seo`,
+        path: `${__dirname}/src/markdown/seo`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `not-found`,
+    //     path: `${__dirname}/src/markdown/not-found`,
+    //   },
+    // },
 
     {
       resolve: `gatsby-plugin-facebook-pixel`,
@@ -72,6 +100,7 @@ module.exports = {
       resolve: "gatsby-plugin-sharp",
       options: {
         defaults: {
+          quality: 90,
           formats: [`auto`, `webp`, `avif`],
           placeholder: `none`,
         },

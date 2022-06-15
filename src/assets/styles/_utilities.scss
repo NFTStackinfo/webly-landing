@@ -1,4 +1,25 @@
 @layer utilities {
+  .body1, .body2, .body3, .caption {
+    @apply font-secondary
+  }
+
+  .h1, .h2, .h3, .h4, .h5, .h6, .s1, .s2 {
+    @apply font-primary uppercase
+  }
+
+  .h1 { @apply  sm:text-h4 lg:text-h2 text-h1; }
+  .h2 { @apply text-h2 lg:text-h3 sm:text-h4 }
+  .h3 { @apply text-h3 lg:text-h4 sm:text-h5 }
+  .h4 { @apply text-h4 sm:text-h5 }
+  .h5 { @apply text-h5 sm:text-h6 }
+  .h6 { @apply text-h6 }
+  .s1 { @apply text-s1 }
+  .s2 { @apply text-s2 }
+  .body1 { @apply text-body1 }
+  .body2 { @apply text-body2}
+  .body3 { @apply text-body3 }
+  .caption { @apply text-caption}
+
   .text-gradient {
     &-1, &-2 {
       -webkit-background-clip: text;

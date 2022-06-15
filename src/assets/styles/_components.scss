@@ -2,7 +2,7 @@
   .container {
     @apply max-w-[1200px] mx-auto px-10 md:px-4;
 
-    &-md, &-sm {
+    &-md, &-sm, &-xs {
       @apply mx-auto px-10 md:px-4;
     }
 
@@ -13,19 +13,19 @@
     &-sm {
       @apply max-w-[818px] lg:max-w-full
     }
+
+    &-xs {
+      @apply max-w-[600px]
+    }
   }
 
   .btn {
-    @apply flex flex-row content-center items-center py-3 px-6
+    @apply flex flex-row content-center items-center py-3 space-x-4
     font-secondary text-body2 font-[600] text-white
     bg-transparent uppercase rounded-[30px] h-12 fill-white cursor-pointer
     hover:bg-white/10
     disabled:cursor-default disabled:text-philippine-silver disabled:fill-philippine-silver disabled:hover:bg-transparent
     ;
-
-    :not(:last-child) {
-      @apply mr-4;
-    }
 
     &.secondary {
       @apply text-electric-ultramarine fill-electric-ultramarine bg-white hover:bg-cultured;
@@ -45,7 +45,7 @@
   }
 
   .text-field-group {
-    @apply w-[420px] font-secondary;
+    @apply max-w-[420px] w-full font-secondary;
 
     .text-field {
       @apply h-[52px] rounded-[38px] flex items-center bg-white p-0.5 pl-4
@@ -64,6 +64,46 @@
 
     .helper-text {
       @apply text-white text-body3 mt-2 px-4;
+    }
+  }
+
+  header {
+    .content {
+      @apply items-center flex justify-between w-full py-4 h-20 rounded-[40px] px-6
+      transition-height duration-500 ease-linear
+      sm:flex-col sm:justify-start sm:px-4;
+
+      @media (max-width: 768px) {
+        &.active {
+          @apply bg-electric-ultramarine;
+          height: calc(100vh - 32px);
+
+          .mobile-nav {
+            @apply relative pb-4;
+
+            ::after {
+              content: '';
+              @apply block bg-very-light-azure h-[2px] absolute bottom-0 -left-4 -right-4;
+            }
+          }
+
+          .navbar {
+            @apply block relative mt-4 px-8 pt-8 pb-4 h-full;
+
+            .list {
+              @apply flex-col space-x-0 h-full text-body1 font-[600];
+            }
+          }
+        }
+      }
+
+      .navbar {
+        @apply sm:hidden sm:overflow-hidden;
+
+        .list {
+          @apply flex space-x-6 text-body2 items-center uppercase;
+        }
+      }
     }
   }
 }

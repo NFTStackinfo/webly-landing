@@ -1,36 +1,43 @@
-import React, { useState } from 'react'
-import { TextField } from './UIKit'
+import React, {forwardRef, useState} from 'react';
+import {TextField} from './UIKit';
+import {useJoinUs} from '../fetchHooks/useJoinUs';
+import Footer from './Footer';
+import useEmailTextField from '../hooks/useEmailTextField';
 
-function SectionJoin(props) {
-  const [textField, setTextField] = useState('')
+const SectionJoin = forwardRef(({onLinkClick, toggleModal}, ref) => {
+  const {sectionHeading, sectionText, sectionBtnText} = useJoinUs();
+  const {textField, onSubmit, onChange, errorMessage} = useEmailTextField(
+      onSuccess);
+
+  function onSuccess() {
+    toggleModal(true);
+  }
 
   return (
-    <section className="section-join rounded-t-section mt-40">
-      <div className="wrapper-join py-30">
-        <div className="container-sm">
-          <div className="content text-center">
-            <h2 className="font-bold text-gradient-1 font-primary">
-              Join Other Creators and Teams Who’ve Used Webly to Launch And
-              Manage
-              Their NFT Projects
-            </h2>
+      <section className="section-join pt-10 mt-30 md:mt-20" ref={ref}
+               id="section-join">
+        <div className="wrapper rounded-t-section">
+          <div className="wrapper-join pt-30 pb-40 sm:pb-36 sm:pt-20">
+            <div className="container-sm">
+              <div className="content text-center">
+                <h2 className="font-bold text-gradient-1 font-primary">{sectionHeading}</h2>
 
-            <p className="mt-2">
-              Launch your NFT collection directly on your website. The entire
-              setup process of our NFT collection generator won't take more than
-              two minutes.
-            </p>
+                <p className="mt-2">{sectionText}</p>
 
-            <TextField
-              value={textField}
-              onChange={e => setTextField(e.target.value)}
-              className="mx-auto mt-12"
-            />
+                <TextField
+                    onChange={onChange}
+                    value={textField}
+                    onSubmit={onSubmit}
+                    helperText={errorMessage}
+                    className="mx-auto mt-12"
+                />
+              </div>
+            </div>
           </div>
+          <Footer onLinkClick={onLinkClick}/>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+  );
+});
 
-export default SectionJoin
+export default SectionJoin;

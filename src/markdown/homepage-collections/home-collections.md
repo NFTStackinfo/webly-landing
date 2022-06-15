@@ -1,7 +1,7 @@
 ---
 title: home-collections
 sectionHeading: COLLECTIONS USING OUR SMART CONTRACTS
-socialList:
+list:
   - itemImage: /assets/1.png
     itemName: donny doos
   - itemImage: /assets/2.png

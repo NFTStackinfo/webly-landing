@@ -1,15 +1,25 @@
-import React, { useState } from 'react'
+import React, {forwardRef, useState} from 'react';
 import { TextField } from './UIKit'
 import { useHomepageHero } from "../fetchHooks/useHomepageHero"
+import useEmailTextField from '../hooks/useEmailTextField';
 
-function SectionHero(props) {
-  const [textField, setTextField] = useState('')
+const SectionHero = forwardRef(({ toggleModal }, ref)  => {
   const {sectionHeading, sectionText, sectionBtnText} = useHomepageHero()
+  const {textField, onSubmit, onChange, errorMessage} = useEmailTextField(onSuccess)
 
-  console.log(sectionHeading)
+  function onSuccess () {
+    toggleModal(true)
+  }
 
   return (
-    <main className="section-hero pt-[216px] pb-[200px] rounded-b-section">
+      <main
+          className="
+        section-hero pt-54 pb-50 rounded-b-section
+        lg:pb-40 sm:pt-34 sm:pb-18
+      "
+          id="section-hero"
+          ref={ref}
+      >
       <div className="container-sm">
         <div className="content text-center">
           <h1 className="font-bold text-gradient-1 font-primary">{sectionHeading}</h1>
@@ -17,15 +27,17 @@ function SectionHero(props) {
           <p className="mt-4">{sectionText}</p>
 
           <TextField
-            className="mx-auto mt-12"
-            onChange={(e) => setTextField(e.target.value)}
-            value={textField}w
-            buttonText = {sectionBtnText}
+              className="mx-auto mt-12 sm:mt-8"
+              onChange={onChange}
+              value={textField}
+              onSubmit={onSubmit}
+              helperText={errorMessage}
+              buttonText = {sectionBtnText}
           />
         </div>
       </div>
     </main>
   )
-}
+})
 
 export default SectionHero
