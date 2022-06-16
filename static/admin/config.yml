@@ -2,7 +2,7 @@ backend:
     name: git-gateway
 #  name: github
 #  repo: NFTStackinfo/webly-landing
-  branch: main
+    branch: main
 
 #publish_mode: editorial_workflow
 
