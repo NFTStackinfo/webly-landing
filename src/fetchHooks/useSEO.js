@@ -5,9 +5,9 @@ export const useSEO = () => {
     {
       markdownRemark(frontmatter: { title: { eq: "seo" } }) {
         frontmatter {
-            metaTitle
-            metaDescription
-            author
+          metaTitle
+          metaDescription
+          author
         }
       }
     }

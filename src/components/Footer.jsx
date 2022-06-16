@@ -1,41 +1,43 @@
-import React from 'react'
-import { Button, Icon } from './UIKit'
-import {useSocials} from '../fetchHooks/useSocials';
+import React from "react"
+import { Button } from "./UIKit"
+import { useSocials } from "../fetchHooks/useSocials"
 
 const links = [
   {
-    name: 'Home',
-    to: '#section-hero'
+    name: "Home",
+    to: "#section-hero",
   },
   {
-    name: 'How it works',
-    to: '#section-how-it-works'
+    name: "How it works",
+    to: "#section-how-it-works",
   },
   {
-    name: 'Team',
-    to: '#section-team'
+    name: "Team",
+    to: "#section-team",
   },
   {
-    name: 'Terms of Use'
-  }
+    name: "Terms of Use",
+  },
 ]
 
 const Footer = ({ onLinkClick }) => {
-  const {socialList} = useSocials()
+  const { socialList } = useSocials()
 
   return (
     <footer className="py-[26px]">
       <div className="container">
         <div className="flex justify-center w-full text-white">
-          <ul className="
+          <ul
+            className="
           flex space-x-8 text-body2 font-semibold
           sm:flex-col sm:space-y-4 sm:space-x-0 sm:text-center
-          ">
+          "
+          >
             {links.map(({ name, to }) => (
               <li
                 key={name}
                 onClick={() => onLinkClick(to)}
-                className={[to ? 'cursor-pointer' : 'cursor-default'].join(' ')}
+                className={[to ? "cursor-pointer" : "cursor-default"].join(" ")}
               >
                 {name}
               </li>
@@ -44,29 +46,33 @@ const Footer = ({ onLinkClick }) => {
         </div>
 
         <div
-            className="
+          className="
           flex justify-between items-center pt-6 border-t border-very-light-azure mt-6
           sm:flex-col sm:items-center sm:h-auto sm:space-y-6
-          ">
-
+          "
+        >
           <div className="flex">
-            <img src="/assets/logo.svg" alt="WEBLY" className="h-4"/>
+            <img src="/assets/logo.svg" alt="WEBLY" className="h-4" />
 
-            <span className="text-caption ml-2.5">©All rights reserved. 2022</span>
+            <span className="text-caption ml-2.5">
+              ©All rights reserved. 2022
+            </span>
           </div>
 
-          <img className='max-w-[134px]' src="/assets/certik.png" alt="CERTIK" />
+          <img
+            className="max-w-[134px]"
+            src="/assets/certik.png"
+            alt="CERTIK"
+          />
 
           <ul className="flex space-x-3 sm:space-x-2">
-            {
-              socialList.map(({icon, url}) => {
-                return (
-                    <li key={icon}>
-                      <Button suffixIcon={icon} link={url} />
-                    </li>
-                )
-              })
-            }
+            {socialList.map(({ icon, url }) => {
+              return (
+                <li key={icon}>
+                  <Button suffixIcon={icon} link={url} />
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>

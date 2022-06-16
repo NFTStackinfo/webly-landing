@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import Slider from "react-slick";
-import {useCollections} from '../fetchHooks/useCollections';
-import {GatsbyImage, getImage} from 'gatsby-plugin-image';
+import React  from "react"
+import Slider from "react-slick"
+import { useCollections } from "../fetchHooks/useCollections"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const settings = {
   dots: false,
@@ -14,28 +14,29 @@ const settings = {
   autoplaySpeed: 0,
   speed: 3000,
   cssEase: "linear",
-};
+}
 
 const SectionCollectionsCarousel = () => {
+  const { list } = useCollections()
 
-  const {list} = useCollections()
+  const enlargedList = [...list, ...list, ...list]
   return (
     <>
       <Slider {...settings}>
-        {list.map(({itemImage, itemName}, index) => (
+        {enlargedList.map(({ itemImage, itemName }, index) => (
           <div key={index} className="pr-6">
             <GatsbyImage
-                className="block max-w-full w-full"
-                alt={itemName}
-                image={getImage(itemImage)}
-                // title={itemName}
-                objectFit={'contain'}
+              className="block max-w-full w-full"
+              alt={itemName}
+              image={getImage(itemImage)}
+              // title={itemName}
+              objectFit={"contain"}
             />
           </div>
         ))}
       </Slider>
     </>
-  );
+  )
 }
 
 export default SectionCollectionsCarousel

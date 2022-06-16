@@ -1,35 +1,42 @@
-import React from 'react'
+import React from "react"
+import Slider from "react-slick"
+import SectionTestimonialsItem from "./SectionTestimonialsItem"
+import data from "../data/testimonials-data"
+import { useTestimonials } from "../fetchHooks/useTestimonials"
 
-function SectionTestimonials(props) {
+const settings = {
+  dots: data.length > 2,
+  infinite: true,
+  arrows: false,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  centerPadding: 0,
+  pauseOnHover: false,
+  speed: 1500,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  adaptiveHeight: true,
+
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+}
+
+const SectionTestimonials = props => {
+  const { list } = useTestimonials()
   return (
-    <section className="section-testimonials mt-40">
+    <section className="section-testimonials mt-40 md:mt-30 pb-18">
       <div className="container-md">
-        <div className="content grid grid-cols-2 gap-6">
-          <div className="text py-[30px]">
-            <img
-              src="/assets/testimonials/racing-logo.svg" alt="Racing Social Club"
-              className="w-[80px]"
-            />
-
-            <p className="font-[600] mt-6 text-granite-gray">
-              “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              facilisis interdum nunc eget tincidunt. “
-            </p>
-
-            <span className="text-body2 font-[600] mt-4 block text-raisin-black">
-              Jonh Svarovski
-            </span>
-
-            <span className="text-body3 mt-1 block text-granite-gray">
-              Racing Social Club
-            </span>
-          </div>
-
-          <div className="img">
-            <img src="/assets/testimonials/racing-img.png"
-                 alt="Racing Social Club" />
-          </div>
-        </div>
+        <Slider {...settings}>
+          {list.map((props, index) => (
+            <SectionTestimonialsItem key={index} {...props} />
+          ))}
+        </Slider>
       </div>
     </section>
   )

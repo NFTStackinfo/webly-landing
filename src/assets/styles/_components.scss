@@ -1,109 +1,144 @@
 @layer components {
-  .container {
-    @apply max-w-[1200px] mx-auto px-10 md:px-4;
+    .container {
+        @apply max-w-[1200px] mx-auto px-10 md:px-4;
 
-    &-md, &-sm, &-xs {
-      @apply mx-auto px-10 md:px-4;
-    }
-
-    &-md {
-      @apply max-w-[1076px];
-    }
-
-    &-sm {
-      @apply max-w-[818px] lg:max-w-full
-    }
-
-    &-xs {
-      @apply max-w-[600px]
-    }
-  }
-
-  .btn {
-    @apply flex flex-row content-center items-center py-3 space-x-4
-    font-secondary text-body2 font-[600] text-white
-    bg-transparent uppercase rounded-[30px] h-12 fill-white cursor-pointer
-    hover:bg-white/10
-    disabled:cursor-default disabled:text-philippine-silver disabled:fill-philippine-silver disabled:hover:bg-transparent
-    ;
-
-    &.secondary {
-      @apply text-electric-ultramarine fill-electric-ultramarine bg-white hover:bg-cultured;
-
-      &.black {
-        @apply text-black fill-black;
-      }
-    }
-
-    &.primary {
-      @apply bg-electric-ultramarine hover:bg-inter-blue;
-    }
-
-    &.secondary, &.primary {
-      @apply disabled:cursor-default disabled:bg-philippine-silver disabled:fill-cultured text-cultured
-    }
-  }
-
-  .text-field-group {
-    @apply max-w-[420px] w-full font-secondary;
-
-    .text-field {
-      @apply h-[52px] rounded-[38px] flex items-center bg-white p-0.5 pl-4
-      text-body2 font-normal text-raisin-black placeholder-granite-gray ring-very-light-azure
-      focus-within:ring-2
-      ;
-
-      input {
-        @apply h-full w-full bg-transparent mr-2 focus:outline-none;
-      }
-
-      button {
-        @apply flex-shrink-0
-      }
-    }
-
-    .helper-text {
-      @apply text-white text-body3 mt-2 px-4;
-    }
-  }
-
-  header {
-    .content {
-      @apply items-center flex justify-between w-full py-4 h-20 rounded-[40px] px-6
-      transition-height duration-500 ease-linear
-      sm:flex-col sm:justify-start sm:px-4;
-
-      @media (max-width: 768px) {
-        &.active {
-          @apply bg-electric-ultramarine;
-          height: calc(100vh - 32px);
-
-          .mobile-nav {
-            @apply relative pb-4;
-
-            ::after {
-              content: '';
-              @apply block bg-very-light-azure h-[2px] absolute bottom-0 -left-4 -right-4;
-            }
-          }
-
-          .navbar {
-            @apply block relative mt-4 px-8 pt-8 pb-4 h-full;
-
-            .list {
-              @apply flex-col space-x-0 h-full text-body1 font-[600];
-            }
-          }
+        &-md {
+            @apply max-w-[1076px] mx-auto px-10 md:px-4;
         }
-      }
 
-      .navbar {
-        @apply sm:hidden sm:overflow-hidden;
-
-        .list {
-          @apply flex space-x-6 text-body2 items-center uppercase;
+        &-sm {
+            @apply max-w-[818px] lg:max-w-full mx-auto px-10 md:px-4;
         }
-      }
+
+        &-xs {
+            @apply max-w-[600px] mx-auto px-10 md:px-4;
+        }
     }
-  }
+
+    .btn {
+        @apply flex flex-row content-center items-center py-3 space-x-3
+        font-secondary text-body2 font-semibold text-white
+        bg-transparent uppercase rounded-[30px] h-12 fill-white cursor-pointer
+        hover:bg-white/10
+        disabled:cursor-default disabled:text-philippine-silver disabled:fill-philippine-silver disabled:hover:bg-transparent
+        ;
+
+        &.secondary {
+            @apply text-electric-ultramarine fill-electric-ultramarine bg-white hover:bg-cultured;
+
+            &.black {
+                @apply text-black fill-black;
+            }
+        }
+
+        &.primary {
+            @apply bg-electric-ultramarine hover:bg-inter-blue;
+        }
+
+        &.secondary, &.primary {
+            @apply disabled:cursor-default disabled:bg-philippine-silver disabled:fill-cultured text-cultured
+        }
+    }
+
+    .text-field-group {
+        @apply max-w-[420px] w-full font-secondary;
+
+        .text-field {
+            @apply h-[52px] rounded-[38px] flex items-center bg-white p-0.5 pl-4
+            text-body2 font-normal text-raisin-black placeholder-granite-gray ring-very-light-azure
+            focus-within:ring-2
+            ;
+
+            input {
+                @apply h-full w-full bg-transparent mr-2 focus:outline-none;
+            }
+
+            button {
+                @apply flex-shrink-0
+            }
+        }
+
+        .helper-text {
+            @apply text-white text-body3 mt-2 px-4;
+        }
+    }
+
+    .header {
+        .content {
+            @apply items-center flex justify-between w-full py-4 h-20 rounded-[40px] px-6
+            transition-height duration-500 ease-linear
+            sm:flex-col sm:justify-start sm:px-4;
+
+            @media (max-width: 768px) {
+                &.active {
+                    @apply bg-electric-ultramarine;
+                    height: calc(100vh - 32px);
+
+                    .mobile-nav {
+                        @apply relative pb-4;
+
+                        ::after {
+                            content: '';
+                            @apply block bg-very-light-azure h-[2px] absolute bottom-0 -left-4 -right-4;
+                        }
+                    }
+
+                    .navbar {
+                        @apply block relative mt-4 px-8 pt-8 pb-4 h-full;
+
+                        .list {
+                            @apply flex-col space-x-0 h-full text-body1 font-semibold;
+                        }
+                    }
+                }
+            }
+
+            .navbar {
+                @apply sm:hidden sm:overflow-hidden;
+
+                .list {
+                    @apply flex space-x-6 text-body2 items-center uppercase;
+                }
+            }
+        }
+    }
+
+    .section-testimonials {
+        .slick {
+            &-list {
+                .slick-active {
+                    @apply mr-6;
+                }
+            }
+
+            &-dots {
+                @apply -bottom-16;
+
+                li {
+                    width: 10px !important;
+                    height: 10px !important;
+                    transition: 0.3s;
+                    @apply mx-2;
+
+                    button {
+                        @apply bg-philippine-silver rounded-full;
+                        height: 10px !important;
+                        width: 10px !important;
+
+                        &:before {
+                            content: none !important;
+                        }
+                    }
+
+                    &.slick-active {
+                        @apply transform scale-150;
+
+                        button {
+                            @apply bg-electric-ultramarine;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

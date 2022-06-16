@@ -64,6 +64,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `homepage-testimonials`,
+        path: `${__dirname}/src/markdown/homepage-testimonials`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `social-links`,
         path: `${__dirname}/src/markdown/social-links`,
       },
@@ -133,7 +140,7 @@ module.exports = {
             },
           },
           `gatsby-remark-external-links`,
-          'gatsby-plugin-postcss',
+          "gatsby-plugin-postcss",
         ],
       },
     },

@@ -1,4 +1,4 @@
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useJoinUs = () => {
   const data = useStaticQuery(graphql`
@@ -11,7 +11,7 @@ export const useJoinUs = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data?.markdownRemark?.frontmatter;
-};
+  return data?.markdownRemark?.frontmatter
+}

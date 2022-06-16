@@ -1,30 +1,32 @@
-import React from 'react'
-import { Icon } from './index'
+import React from "react"
+import { Icon } from "./index"
 
 function Button({
-                  children,
-                  link,
-                  disabled = false,
-                  onClick,
-                  className = '',
-                  variant='',
-                  prefixIcon,
-                  onPrefixClick,
-                  onSuffixClick,
-                  suffixIcon,
-                  ...props
-                }) {
+  children,
+  link,
+  disabled = false,
+  onClick,
+  className = "",
+  variant = "",
+  prefixIcon,
+  onPrefixClick,
+  onSuffixClick,
+  suffixIcon,
+  ...props
+}) {
   return (
     <>
       {link ? (
         <a
           href={link}
-          className={
-          ['btn', ...variant.split(' '), children ? 'px-6' : 'px-3', className]
-            .join(' ')
-          }
-          target='_blank'
-          rel='noopener noreferrer'
+          className={[
+            "btn",
+            ...variant.split(" "),
+            children ? "px-6" : "px-3",
+            className,
+          ].join(" ")}
+          target="_blank"
+          rel="noopener noreferrer"
           {...props}
         >
           {prefixIcon && <Icon name={prefixIcon} />}
@@ -33,16 +35,31 @@ function Button({
         </a>
       ) : (
         <button
-          className={
-            ['btn', ...variant.split(' '), children ? 'px-6' : 'px-3', className]
-              .join(' ')
-          }
-          onClick={onClick} disabled={disabled}
+          className={[
+            "btn",
+            ...variant.split(" "),
+            children ? "px-6" : "px-3",
+            className,
+          ].join(" ")}
+          onClick={onClick}
+          disabled={disabled}
           {...props}
         >
-          {prefixIcon && <Icon name={prefixIcon} className="btn__prefix" onClick={onPrefixClick}/>}
+          {prefixIcon && (
+            <Icon
+              name={prefixIcon}
+              className="btn__prefix"
+              onClick={onPrefixClick}
+            />
+          )}
           {children && <span>{children}</span>}
-          {suffixIcon && <Icon name={suffixIcon} className="btn__suffix" onClick={onSuffixClick}/>}
+          {suffixIcon && (
+            <Icon
+              name={suffixIcon}
+              className="btn__suffix"
+              onClick={onSuffixClick}
+            />
+          )}
         </button>
       )}
     </>

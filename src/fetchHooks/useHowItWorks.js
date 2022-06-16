@@ -1,4 +1,4 @@
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useHowItWorks = () => {
   const data = useStaticQuery(graphql`
@@ -16,11 +16,10 @@ export const useHowItWorks = () => {
               }
             }
           }
-          
         }
       }
     }
-  `);
+  `)
 
-  return data?.markdownRemark?.frontmatter;
-};
+  return data?.markdownRemark?.frontmatter
+}

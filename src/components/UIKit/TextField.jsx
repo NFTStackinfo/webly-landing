@@ -1,21 +1,21 @@
-import React, { useRef } from 'react'
-import Button from './Button'
+import React, { useRef } from "react"
+import Button from "./Button"
 
 function TextField({
-                     type = 'email',
-                     placeholder = 'Email Address',
-                     buttonText = 'JOIN WAITLIST',
-                     value = '',
-                     onChange,
-                     className = '',
-                     onSubmit,
-                     helperText = '',
-                     ...props
-                   }) {
+  type = "email",
+  placeholder = "Email Address",
+  buttonText = "JOIN WAITLIST",
+  value = "",
+  onChange,
+  className = "",
+  onSubmit,
+  helperText = "",
+  ...props
+}) {
   const inputRef = useRef(null)
 
   return (
-    <div className={['text-field-group', className].join(' ')} {...props}>
+    <div className={["text-field-group", className].join(" ")} {...props}>
       <form className="text-field" onSubmit={e => onSubmit(e, inputRef)}>
         <input
           type={type}

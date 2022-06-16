@@ -133,6 +133,24 @@ collections:
           - { label: Project image, name: itemImage , widget: image }
           - { label: Project name, name: itemName }
 
+  - name: homepage-testimonials
+    label: Homepage Testimonials
+    folder: src/markdown/homepage-testimonials
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - name: list
+        label: Testimonial list
+        widget: list
+        fields:
+          - { label: Partner image, name: itemImage , widget: image }
+          - { label: Partner name, name: itemName }
+          - { label: Partner company , name: itemCompany }
+          - { label: Partner Description, name: itemDescription }
+
 
   # 404
 #  - name: not-found

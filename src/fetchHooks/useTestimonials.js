@@ -1,24 +1,20 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-export const useTeam = () => {
+export const useTestimonials = () => {
   const data = useStaticQuery(graphql`
     {
-      markdownRemark(frontmatter: { title: { eq: "home-team" } }) {
+      markdownRemark(frontmatter: { title: { eq: "home-testimonials" } }) {
         frontmatter {
           list {
+            itemCompany
             itemDescription
-            itemTitle
+            itemName
             itemImage {
               childImageSharp {
                 gatsbyImageData
               }
             }
-            socialList {
-              icon
-              url
-            }
           }
-          sectionHeading
         }
       }
     }

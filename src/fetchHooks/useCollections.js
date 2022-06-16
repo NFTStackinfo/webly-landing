@@ -1,4 +1,4 @@
-import {graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useCollections = () => {
   const data = useStaticQuery(graphql`
@@ -9,7 +9,7 @@ export const useCollections = () => {
           list {
             itemImage {
               childImageSharp {
-                  gatsbyImageData
+                gatsbyImageData
               }
             }
             itemName
@@ -17,7 +17,7 @@ export const useCollections = () => {
         }
       }
     }
-  `);
+  `)
 
-  return data?.markdownRemark?.frontmatter;
-};
+  return data?.markdownRemark?.frontmatter
+}

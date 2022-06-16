@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Button } from './UIKit'
+import React, { useEffect, useState } from "react"
+import { Button } from "./UIKit"
 
 function Header({ onLinkClick, sections = [] }) {
   const [isColored, setIsColored] = useState(false)
@@ -12,35 +12,36 @@ function Header({ onLinkClick, sections = [] }) {
 
   useEffect(() => {
     handleScroll()
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('resize', handleScroll)
-    window.addEventListener('wheel', handleScroll)
+    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("resize", handleScroll)
+    window.addEventListener("wheel", handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
-  const handleMenuClick = (to) => {
-    console.log(to);
+  const handleMenuClick = to => {
     setIsMenuOpen(false)
     onLinkClick(to)
   }
 
-
   return (
-    <header className={`z-40 w-full top-4 ${isColored ? 'fixed' : 'absolute'}`}>
-      <div
-        className="container">
-        <div className={`content
-         ${isColored ? 'bg-electric-ultramarine' : ''}
-         ${isMenuOpen ? 'active' : ''}
-         `}>
+    <header
+      className={`header z-40 w-full top-4 ${isColored ? "fixed" : "absolute"}`}
+    >
+      <div className="container">
+        <div
+          className={`content
+         ${isColored ? "bg-electric-ultramarine" : ""}
+         ${isMenuOpen ? "active" : ""}
+         `}
+        >
           <div className="mobile-nav sm:flex sm:w-full sm:justify-between sm:items-center">
             <img
               src="/assets/logo.svg"
               alt="WEBLY"
               className="h-5 cursor-pointer"
-              onClick={() => handleMenuClick('#section-hero')}
+              onClick={() => handleMenuClick("#section-hero")}
             />
 
             <Button
@@ -54,23 +55,24 @@ function Header({ onLinkClick, sections = [] }) {
           <nav className="navbar">
             <ul className="list">
               <li
-                onClick={() => handleMenuClick('#section-how-it-works')}
+                onClick={() => handleMenuClick("#section-how-it-works")}
                 className="cursor-pointer sm:mt-auto"
               >
                 How it works
               </li>
 
               <li
-                onClick={() => handleMenuClick('#section-team')}
+                onClick={() => handleMenuClick("#section-team")}
                 className="cursor-pointer sm:mt-8"
-              >Team
+              >
+                Team
               </li>
 
               <li className="sm:mt-auto">
                 <Button
                   variant="secondary black"
                   suffixIcon="arrow-forward"
-                  onClick={() => handleMenuClick('#section-join')}
+                  onClick={() => handleMenuClick("#section-join")}
                 >
                   Join the waitlist
                 </Button>
