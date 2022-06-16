@@ -3,7 +3,7 @@ module.exports = {
     title: `WEBLY`,
     description: `Webly description`,
     author: `Webly`,
-    siteUrl: `https://webly-landing.netlify.com`,
+    siteUrl: `https://webly-test.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://webly-landing.netlify.com",
-        sitemap: "https://webly-landing.netlify.com/sitemap.xml",
+        host: "https://webly-test.netlify.app/",
+        sitemap: "https://webly-test.netlify.app/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
