@@ -40,7 +40,7 @@ function Header({ onLinkClick, sections = [] }) {
             <img
               src="/assets/logo.svg"
               alt="WEBLY"
-              className="cursor-pointer max-w-[138px] w-full"
+              className="cursor-pointer max-w-[138px] w-full md:max-w-[108px]"
               onClick={() => handleMenuClick("#section-hero")}
             />
 

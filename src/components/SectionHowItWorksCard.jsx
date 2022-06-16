@@ -3,12 +3,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 function SectionHowItWorksCard({ img, title, description }) {
   return (
-    <div className="card-wrapper text-center text-white max-w-[358px] grid justify-items-center">
+    <div className="card-wrapper text-center text-white max-w-[358px] flex flex-col items-center
+      sm:max-w-[235px]">
       <GatsbyImage
-        className="max-w-full"
+        className="block w-full max-w-[250px]"
         alt={title}
         image={getImage(img)}
-        objectFit={"contain"}
       />
 
       <h4 className="text-s1 font-black mt-6 font-primary">{title}</h4>

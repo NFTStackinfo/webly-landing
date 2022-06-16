@@ -51,8 +51,8 @@ const Footer = ({ onLinkClick }) => {
           sm:flex-col sm:items-center sm:h-auto sm:space-y-6
           "
         >
-          <div className="flex">
-            <img src="/assets/logo.svg" alt="WEBLY" className="h-4" />
+          <div className="flex items-center">
+            <img src="/assets/logo.svg" alt="WEBLY" className="max-w-[80px] w-full" />
 
             <span className="text-caption ml-2.5">
               ©All rights reserved. 2022
