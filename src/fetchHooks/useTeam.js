@@ -10,7 +10,7 @@ export const useTeam = () => {
             itemTitle
             itemImage {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             socialList {

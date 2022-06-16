@@ -7,6 +7,7 @@ const SectionTestimonials = ({
   itemName,
   itemCompany,
 }) => {
+  console.log(itemImage);
   return (
     <div className="content grid">
       <GatsbyImage

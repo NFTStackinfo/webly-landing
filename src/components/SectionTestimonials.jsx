@@ -29,6 +29,8 @@ const settings = {
 
 const SectionTestimonials = props => {
   const { list } = useTestimonials()
+
+  console.log(list);
   return (
     <section className="section-testimonials mt-40 md:mt-30 pb-18">
       <div className="container-md">

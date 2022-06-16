@@ -11,7 +11,7 @@ export const useTestimonials = () => {
             itemName
             itemImage {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
           }
