@@ -13,6 +13,7 @@ export const useCollections = () => {
               }
             }
             itemName
+            url
           }
         }
       }

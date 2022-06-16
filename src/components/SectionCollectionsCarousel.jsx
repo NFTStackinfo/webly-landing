@@ -9,6 +9,7 @@ const settings = {
   arrows: false,
   variableWidth: true,
   slidesToScroll: 1,
+  // slidesToShow: 4,
   autoplay: true,
   pauseOnHover: false,
   autoplaySpeed: 0,
@@ -23,15 +24,16 @@ const SectionCollectionsCarousel = () => {
   return (
     <>
       <Slider {...settings}>
-        {enlargedList.map(({ itemImage, itemName }, index) => (
+        {enlargedList.map(({ itemImage, itemName, url }, index) => (
           <div key={index} className="pr-6">
-            <GatsbyImage
-              className="block max-w-full w-full"
-              alt={itemName}
-              image={getImage(itemImage)}
-              // title={itemName}
-              objectFit={"contain"}
-            />
+            <a href={url} target='_blank' rel="noreferrer" className='block'>
+              <GatsbyImage
+                  className="block max-w-full w-full rounded-[30px] max-w-[350px]"
+                  alt={itemName}
+                  image={getImage(itemImage)}
+                  objectFit={"contain"}
+              />
+            </a>
           </div>
         ))}
       </Slider>

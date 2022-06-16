@@ -19,7 +19,7 @@ collections:
     editor:
       preview: false
     fields:
-        - { name: title, label: Title }
+        - { name: title, label: Title, widget: hidden }
         - { name: metaTitle, label: Meta Title }
         - { name: metaDescription, label: Meta Description }
         - { name: author, label: Author }
@@ -28,11 +28,10 @@ collections:
     label: Social Links
     folder: src/markdown/social-links
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-        - { name: title, label: Title }
+        - { name: title, label: Title, widget: hidden }
         - name: socialList
           label: Social list
           widget: list
@@ -49,11 +48,10 @@ collections:
     label: Homepage Hero
     folder: src/markdown/homepage-hero
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: hidden }
       - { name: sectionHeading, label: Hero heading }
       - { name: sectionText, label: Hero Text }
       - { name: sectionBtnText, label: Hero button text }
@@ -62,11 +60,10 @@ collections:
     label: Homepage How It Works
     folder: src/markdown/homepage-how-it-works
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: hidden }
       - { name: sectionHeading, label: Section heading }
       - { name: sectionText, label: Section text , widget: text }
       - name: list
@@ -82,11 +79,10 @@ collections:
     label: Homepage Team
     folder: src/markdown/homepage-team
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: hidden }
       - { name: sectionHeading, label: Section heading }
       - name: list
         label: Team list
@@ -107,11 +103,10 @@ collections:
     label: Homepage Join us
     folder: src/markdown/homepage-join-us
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: hidden }
       - { name: sectionHeading, label: Section heading }
       - { name: sectionText, label: Section Text }
       - { name: sectionBtnText, label: Section button text }
@@ -120,11 +115,10 @@ collections:
     label: Homepage Collections
     folder: src/markdown/homepage-collections
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: hidden }
       - { name: sectionHeading, label: Section heading }
       - name: list
         label: Collection list
@@ -132,16 +126,16 @@ collections:
         fields:
           - { label: Project image, name: itemImage , widget: image }
           - { label: Project name, name: itemName }
+          - { label: Project url, name: url }
 
   - name: homepage-testimonials
     label: Homepage Testimonials
     folder: src/markdown/homepage-testimonials
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: hidden }
       - name: list
         label: Testimonial list
         widget: list
@@ -161,7 +155,7 @@ collections:
 #    editor:
 #      preview: false
 #    fields:
-#      - { name: title, label: Title }
+#      - { name: title, label: Title, widget: hidden }
 #      - { name: heroHeading, label: Hero heading }
 #      - { name: heroText, label: Hero text, widget: text }
 #      - { name: primaryBtn, label: Primary Button }
