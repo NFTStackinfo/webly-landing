@@ -3,6 +3,7 @@ import { TextField } from "./UIKit"
 import { useJoinUs } from "../fetchHooks/useJoinUs"
 import Footer from "./Footer"
 import useEmailTextField from "../hooks/useEmailTextField"
+import { StaticImage } from 'gatsby-plugin-image'
 
 const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
   const { sectionHeading, sectionText } = useJoinUs()
@@ -15,7 +16,7 @@ const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
 
   return (
     <section
-      className="section-join pt-10 mt-30 md:mt-20"
+      className="section-join pt-10 mt-30 md:mt-20 relative bg-gradient-3 bg-no-repeat rounded-t-section"
       ref={ref}
       id="section-join"
     >
@@ -41,6 +42,9 @@ const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
         </div>
         <Footer onLinkClick={onLinkClick} />
       </div>
+
+      <StaticImage src="../assets/images/join/left.png" alt="webly" className="absolute bottom-0 left-0"/>
+      <StaticImage src="../assets/images/join/right.png" alt="webly" className="absolute right-0 top-0 max-h-full"/>
     </section>
   )
 })
