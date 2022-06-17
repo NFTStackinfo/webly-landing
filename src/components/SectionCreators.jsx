@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react"
-// import data from '../data/creators-data'
 import SectionCreatorsItem from "./SectionCreatorsItem"
 import { useTeam } from "../fetchHooks/useTeam"
 

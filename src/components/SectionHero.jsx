@@ -23,7 +23,7 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
       ref={ref}
     >
       <div className="container-sm">
-        <div className="content text-center">
+        <div className="content text-center relative z-10">
           <h1 className="font-bold text-gradient-1 font-primary">
             {sectionHeading}
           </h1>
@@ -41,11 +41,11 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
         </div>
       </div>
 
-      <div className="absolute top-0 left-0 max-h-full">
+      <div className="absolute top-0 left-0 max-h-full overflow-hidden z-1">
         <StaticImage src="../assets/images/hero/left.png" alt="webly"/>
       </div>
 
-      <div className="absolute top-0 right-0 max-h-full">
+      <div className="absolute top-0 right-0 max-h-full overflow-hidden z-1">
         <StaticImage src="../assets/images/hero/right.png" alt="webly"/>
       </div>
     </main>

@@ -15,7 +15,7 @@ const SectionHowItWorks = forwardRef((props, ref) => {
       <div className="wrapper py-30 sm:py-20 rounded-section">
         <div className="container">
           <div className="container-sm">
-            <div className="content text-center">
+            <div className="content text-center relative z-10">
               <h2 className="text-gradient-1 font-bold font-primary">
                 {sectionHeading}
               </h2>
@@ -38,11 +38,11 @@ const SectionHowItWorks = forwardRef((props, ref) => {
         </div>
       </div>
 
-      <div className="absolute top-0 left-0 max-h-full">
+      <div className="absolute top-0 left-0 max-h-full overflow-hidden z-1">
         <StaticImage src="../assets/images/how-it-works/left.png" alt="webly"/>
       </div>
 
-      <div className="absolute top-0 right-0 max-h-full">
+      <div className="absolute top-0 right-0 max-h-full overflow-hidden z-1">
         <StaticImage src="../assets/images/how-it-works/right.png" alt="webly"/>
       </div>
     </section>
