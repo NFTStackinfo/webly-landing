@@ -1,6 +1,7 @@
-import React from "react"
-import { Button } from "./UIKit"
-import { useSocials } from "../fetchHooks/useSocials"
+import React from 'react'
+import { Button } from './UIKit'
+import { useSocials } from '../fetchHooks/useSocials'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const ModalSuccess = ({ show = false, toggleModal }) => {
   const { socialList } = useSocials()
@@ -12,9 +13,9 @@ const ModalSuccess = ({ show = false, toggleModal }) => {
   }
 
   const socialButtonText = icon => {
-    if (icon === "twitter") {
-      return "Follow us on Twitter"
-    } else return "Join our Discord"
+    if (icon === 'twitter') {
+      return 'Follow us on Twitter'
+    } else return 'Join our Discord'
   }
 
   return (
@@ -22,7 +23,7 @@ const ModalSuccess = ({ show = false, toggleModal }) => {
       className={`
         transition-opacity duration-300 fixed bg-modal-overlay z-50 inset-0
         flex items-center justify-center
-        ${show ? "block" : "hidden"}
+        ${show ? 'block' : 'hidden'}
       `}
       data-overlay
       onClick={handleClose}
@@ -43,9 +44,9 @@ const ModalSuccess = ({ show = false, toggleModal }) => {
           </div>
 
           <div className="grid justify-items-center px-6 border-b border-very-light-azure pb-8">
-            <img
-              src="/assets/modal/party-popper.png"
-              alt="Thank You!"
+            <StaticImage
+              src="../assets/images/modal/party-popper.png"
+              alt="Thank You?"
               className="w-15"
             />
 
@@ -69,7 +70,7 @@ const ModalSuccess = ({ show = false, toggleModal }) => {
                     className="tracking-[.023em]"
                     link={url}
                   >
-                    {" "}
+                    {' '}
                     {socialButtonText(icon)}
                   </Button>
                 )
