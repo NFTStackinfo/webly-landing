@@ -2,8 +2,7 @@
 title: home-how-it-works
 sectionHeading: HOW IT WORKS
 sectionText: Launch your NFT collection directly on your website. The entire
-  setup process of our NFT collection generator won't take more than two
-  minutes.
+  setup process of our NFT collection generator will take less than two minutes.
 list:
   - itemImage: /assets/connect-metamask.png
     itemTitle: CONNECT METAMASK
