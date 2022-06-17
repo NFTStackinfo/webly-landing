@@ -59,6 +59,7 @@ const Landlords = () => {
           onLinkClick={handleScrollIntoView}
           toggleModal={toggleModal}
         />
+
         <ModalSuccess show={showModal} toggleModal={toggleModal} />
       </div>
     </Layout>

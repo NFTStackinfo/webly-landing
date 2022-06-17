@@ -41,8 +41,13 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
         </div>
       </div>
 
-      <StaticImage src="../assets/images/hero/left.png" alt="webly" className="absolute top-0 left-0"/>
-      <StaticImage src="../assets/images/hero/right.png" alt="webly" className="absolute top-0 right-0"/>
+      <div className="absolute top-0 left-0 max-h-full">
+        <StaticImage src="../assets/images/hero/left.png" alt="webly"/>
+      </div>
+
+      <div className="absolute top-0 right-0 max-h-full">
+        <StaticImage src="../assets/images/hero/right.png" alt="webly"/>
+      </div>
     </main>
   )
 })

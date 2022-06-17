@@ -43,8 +43,13 @@ const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
         <Footer onLinkClick={onLinkClick} />
       </div>
 
-      <StaticImage src="../assets/images/join/left.png" alt="webly" className="absolute bottom-0 left-0"/>
-      <StaticImage src="../assets/images/join/right.png" alt="webly" className="absolute right-0 top-0 max-h-full"/>
+      <div className="absolute bottom-0 left-0 max-h-full">
+        <StaticImage src="../assets/images/join/left.png" alt="webly"/>
+      </div>
+
+      <div className="absolute right-0 top-0 max-h-full">
+        <StaticImage src="../assets/images/join/right.png" alt="webly"/>
+      </div>
     </section>
   )
 })

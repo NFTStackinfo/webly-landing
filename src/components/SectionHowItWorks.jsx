@@ -38,8 +38,13 @@ const SectionHowItWorks = forwardRef((props, ref) => {
         </div>
       </div>
 
-      <StaticImage src="../assets/images/how-it-works/left.png" alt="webly" className="absolute top-0 left-0"/>
-      <StaticImage src="../assets/images/how-it-works/right.png" alt="webly" className="absolute top-0 right-0"/>
+      <div className="absolute top-0 left-0 max-h-full">
+        <StaticImage src="../assets/images/how-it-works/left.png" alt="webly"/>
+      </div>
+
+      <div className="absolute top-0 right-0 max-h-full">
+        <StaticImage src="../assets/images/how-it-works/right.png" alt="webly"/>
+      </div>
     </section>
   )
 })
