@@ -20,7 +20,7 @@ list:
         url: "#"
   - itemImage: /assets/inessa.png
     itemTitle: Inessa
-    itemDescription: Partner & Marketing Lead
+    itemDescription: Partner & Design Lead
     socialList:
       - icon: twitter
         url: "#"
