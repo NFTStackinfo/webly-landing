@@ -136,6 +136,12 @@ module.exports = {
         50: "12.5rem",
         54: "13.5rem",
       },
+      zIndex: {
+        '1': '1',
+        '2': '2',
+        '3': '3',
+        '4': '4'
+      },
       transitionProperty: {
         height: "height",
         spacing: "margin, padding",
