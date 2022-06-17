@@ -1,13 +1,14 @@
 import React, { forwardRef } from "react"
 import SectionHowItWorksCard from "./SectionHowItWorksCard"
 import { useHowItWorks } from "../fetchHooks/useHowItWorks"
+import { StaticImage } from 'gatsby-plugin-image'
 
 const SectionHowItWorks = forwardRef((props, ref) => {
   const { sectionHeading, sectionText, list: howItWorksList } = useHowItWorks()
 
   return (
     <section
-      className="section-how-it-works pt-10 mt-30 lg:mt-20 "
+      className="section-how-it-works pt-10 mt-30 lg:mt-20 relative bg-gradient-3 bg-no-repeat rounded-section"
       ref={ref}
       id="section-how-it-work"
     >
@@ -36,6 +37,9 @@ const SectionHowItWorks = forwardRef((props, ref) => {
           </div>
         </div>
       </div>
+
+      <StaticImage src="../assets/images/how-it-works/left.png" alt="webly" className="absolute top-0 left-0"/>
+      <StaticImage src="../assets/images/how-it-works/right.png" alt="webly" className="absolute top-0 right-0"/>
     </section>
   )
 })

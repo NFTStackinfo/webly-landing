@@ -27,14 +27,11 @@ function Header({ onLinkClick, sections = [] }) {
 
   return (
     <header
-      className={`header z-40 w-full top-4 ${isColored ? "fixed" : "absolute"}`}
+      className="header z-40 w-full top-4 absolute"
     >
       <div className="container">
         <div
-          className={`content
-         ${isColored ? "bg-electric-ultramarine" : ""}
-         ${isMenuOpen ? "active" : ""}
-         `}
+          className={`content ${isMenuOpen ? "active" : ""}`}
         >
           <div className="mobile-nav sm:flex sm:w-full sm:justify-between sm:items-center">
             <img

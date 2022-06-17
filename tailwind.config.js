@@ -126,9 +126,7 @@ module.exports = {
         "gradient-2":
           "linear-gradient(90.05deg, #AB8FFB 17.02%, #230089 75.51%)",
         "gradient-3":
-          "radial-gradient(110.97% 359.55% at 101.01% 12.12%, #7ABDF3 0%, rgba(0, 99, 216, 0.8) 50.52%, #3900DB 100%)",
-
-        "hero-left-shape": "url('../assets/hero/left.png')",
+          "radial-gradient(110.97% 359.55% at 101.01% 12.12%, #7ABDF3 0%, rgba(0, 99, 216, 0.9) 50.52%, #3900DB 100%)",
       },
       spacing: {
         72: "4.5rem",

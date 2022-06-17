@@ -2,6 +2,7 @@ import React, { forwardRef } from "react"
 import { TextField } from "./UIKit"
 import { useHomepageHero } from "../fetchHooks/useHomepageHero"
 import useEmailTextField from "../hooks/useEmailTextField"
+import { StaticImage } from 'gatsby-plugin-image'
 
 const SectionHero = forwardRef(({ toggleModal }, ref) => {
   const { sectionHeading, sectionText, sectionBtnText } = useHomepageHero()
@@ -15,8 +16,8 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
   return (
     <main
       className="
-        section-hero pt-54 pb-50 rounded-b-section
-        lg:pb-40 sm:pt-34 sm:pb-18
+        section-hero pt-54 pb-50 rounded-b-section relative
+        lg:pb-40 sm:pt-34 sm:pb-18 bg-gradient-3 bg-no-repeat
       "
       id="section-hero"
       ref={ref}
@@ -39,6 +40,9 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
           />
         </div>
       </div>
+
+      <StaticImage src="../assets/images/hero/left.png" alt="webly" className="absolute top-0 left-0"/>
+      <StaticImage src="../assets/images/hero/right.png" alt="webly" className="absolute top-0 right-0"/>
     </main>
   )
 })
