@@ -17,8 +17,7 @@ const SectionTestimonials = props => {
     lazyLoad: true,
     pauseOnHover: false,
     speed: 500,
-    adaptiveHeight: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000,
 
     responsive: [
@@ -39,21 +38,20 @@ const SectionTestimonials = props => {
             <SectionTestimonialsItem key={index} {...props} />
           ))}
         </Slider>
+      </div>
+      <div className="flex justify-center mt-8">
+        <Button
+          prefixIcon="arrow-back"
+          variant="secondary black"
+          className="mr-4"
+          onClick={() => sliderRef.current.slickPrev()}
+        />
 
-        <div className="flex justify-center mt-8">
-          <Button
-            prefixIcon="arrow-back"
-            variant="secondary black"
-            className="mr-4"
-            onClick={() => sliderRef.current.slickPrev()}
-          />
-
-          <Button
-            prefixIcon="arrow-forward"
-            variant="secondary black"
-            onClick={() => sliderRef.current.slickNext()}
-          />
-        </div>
+        <Button
+          prefixIcon="arrow-forward"
+          variant="secondary black"
+          onClick={() => sliderRef.current.slickNext()}
+        />
       </div>
     </section>
   )

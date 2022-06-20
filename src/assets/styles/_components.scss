@@ -111,6 +111,10 @@
                 }
             }
 
+
+            &-track {
+                display: flex;
+            }
             &-dots {
                 @apply -bottom-16;
 
