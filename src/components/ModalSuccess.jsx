@@ -55,12 +55,12 @@ const ModalSuccess = ({ show = false, toggleModal }) => {
             </h6>
           </div>
 
-          <div className="px-6 pt-12">
-            <p className="uppercase text-s1 font-bold font-primary">
-              Want to know more?
-            </p>
+          <div className="px-62">
+            {/*<p className="uppercase text-s1 font-bold font-primary">*/}
+            {/*  Want to know more?*/}
+            {/*</p>*/}
 
-            <div className="mt-8 grid justify-items-center gap-y-2">
+            <div className="mt-10 mb-4 grid justify-items-center gap-y-2">
               {socialList.map(({ icon, url }) => {
                 return (
                   <Button

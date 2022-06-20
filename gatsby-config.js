@@ -71,6 +71,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `homepage-features`,
+        path: `${__dirname}/src/markdown/homepage-features`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `social-links`,
         path: `${__dirname}/src/markdown/social-links`,
       },

@@ -12,9 +12,9 @@ const SectionTestimonials = props => {
     arrows: false,
     slidesToShow: 2,
     slidesToScroll: 1,
-    centerPadding: 0,
+    lazyLoad: true,
     pauseOnHover: false,
-    speed: 1500,
+    speed: 500,
     autoplay: true,
     autoplaySpeed: 4000,
 
@@ -28,7 +28,6 @@ const SectionTestimonials = props => {
     ]
   }), [list])
 
-  console.log(list)
   return (
     <section className="section-testimonials mt-40 md:mt-30 pb-18">
       <div className="container-md">

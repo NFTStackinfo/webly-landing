@@ -14,18 +14,20 @@ import { useSEO } from "../fetchHooks/useSEO"
 import SectionFeatures from '../components/SectionFeatures'
 
 const Landlords = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(true)
   const { metaTitle, metaDescription } = useSEO()
   const howItWorksRef = useRef(null)
   const teamRef = useRef(null)
   const joinRef = useRef(null)
   const heroRef = useRef(null)
+  const featuresRef = useRef(null)
 
   const refMapping = {
     "#section-how-it-works": howItWorksRef,
     "#section-team": teamRef,
     "#section-join": joinRef,
     "#section-hero": heroRef,
+    "#section-features": featuresRef,
   }
 
   const handleScrollIntoView = to => {
@@ -49,7 +51,7 @@ const Landlords = () => {
 
         <SectionCollections />
 
-        <SectionFeatures />
+        <SectionFeatures ref={featuresRef} />
 
         <SectionHowItWorks ref={howItWorksRef} />
 

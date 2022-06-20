@@ -15,9 +15,9 @@ const links = [
     name: "Team",
     to: "#section-team",
   },
-  {
-    name: "Terms of Use",
-  },
+  // {
+  //   name: "Terms of Use",
+  // },
 ]
 
 const Footer = ({ onLinkClick }) => {

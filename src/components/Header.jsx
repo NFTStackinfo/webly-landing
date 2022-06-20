@@ -52,6 +52,12 @@ function Header({ onLinkClick, sections = [] }) {
           <nav className="navbar">
             <ul className="list">
               <li
+                onClick={() => handleMenuClick("#section-features")}
+                className="cursor-pointer sm:mt-auto"
+              >
+                WHY WEBLY
+              </li>
+              <li
                 onClick={() => handleMenuClick("#section-how-it-works")}
                 className="cursor-pointer sm:mt-auto"
               >

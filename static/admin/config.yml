@@ -1,7 +1,7 @@
 backend:
-    name: git-gateway
-#    name: github
-#    repo: NFTStackinfo/webly-landing
+#    name: git-gateway
+    name: github
+    repo: NFTStackinfo/webly-landing
     branch: develop
 
 #publish_mode: editorial_workflow
@@ -141,9 +141,26 @@ collections:
         widget: list
         fields:
           - { label: Partner image, name: itemImage , widget: image }
-          - { label: Partner name, name: itemName }
           - { label: Partner company , name: itemCompany }
-          - { label: Partner Description, name: itemDescription }
+          - { label: Partner Description, name: itemDescription, widget: text }
+
+  - name: homepage-features
+    label: Homepage features
+    folder: src/markdown/homepage-features
+    preview_path: /
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Title }
+      - { name: sectionHeading, label: Section heading }
+      - name: list
+        label: Features list
+        widget: list
+        fields:
+          - { label: Card image, name: itemImage , widget: image }
+          - { label: Card heading , name: itemHeading }
+          - { label: Card Description, name: itemDescription, widget: text }
 
 
   # 404
