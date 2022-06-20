@@ -18,7 +18,7 @@ function SectionCreators({
       />
 
       <div className="flex mt-[14px]">
-        <span className="font-[600] text-body1">{itemTitle}</span>
+        <span className="font-semibold text-body1">{itemTitle}</span>
 
         <ul className="grid grid-flow-col gap-2.5 auto-cols-max ml-2">
           {socialList.map(({ icon, url }, idx) => (
