@@ -33,7 +33,7 @@ const SectionTestimonials = props => {
 
   return (
     <section className="section-testimonials mt-40 md:mt-30 pb-18">
-      <div className="container-md">
+      <div className="container-sm">
         <Slider {...settings} ref={sliderRef}>
           {list.map((props, index) => (
             <SectionTestimonialsItem key={index} {...props} />
