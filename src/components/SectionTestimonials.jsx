@@ -7,15 +7,15 @@ const SectionTestimonials = props => {
   const { list } = useTestimonials()
 
   const settings = useMemo(() => ({
-    dots: list.length > 2,
+    dots: false,
     infinite: true,
-    arrows: false,
-    slidesToShow: 2,
+    arrows: true,
+    slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
     pauseOnHover: false,
     speed: 500,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
 
     responsive: [
