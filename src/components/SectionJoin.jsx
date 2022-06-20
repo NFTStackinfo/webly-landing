@@ -16,7 +16,7 @@ const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
 
   return (
     <section
-      className="section-join pt-10 mt-30 md:mt-20 relative bg-gradient-3 bg-no-repeat rounded-t-section"
+      className="section-join pt-10 mt-30 md:mt-20 relative bg-gradient-3 bg-no-repeat rounded-t-section overflow-hidden"
       ref={ref}
       id="section-join"
     >

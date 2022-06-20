@@ -8,7 +8,7 @@ const SectionHowItWorks = forwardRef((props, ref) => {
 
   return (
     <section
-      className="section-how-it-works pt-10 mt-30 lg:mt-20 relative bg-gradient-3 bg-no-repeat rounded-section"
+      className="section-how-it-works pt-10 mt-30 lg:mt-20 relative bg-gradient-3 bg-no-repeat rounded-section overflow-hidden"
       ref={ref}
       id="section-how-it-work"
     >
