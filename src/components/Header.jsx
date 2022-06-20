@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react"
 import { Button } from "./UIKit"
+import useLockedBody from '../hooks/useLockedBody'
 
 function Header({ onLinkClick, sections = [] }) {
   const [isColored, setIsColored] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [locked, setLocked] = useLockedBody();
 
   const handleScroll = () => {
     const rect = sections[0].current.getBoundingClientRect()
@@ -24,6 +26,10 @@ function Header({ onLinkClick, sections = [] }) {
     setIsMenuOpen(false)
     onLinkClick(to)
   }
+
+  useEffect(() => {
+      setLocked(isMenuOpen)
+  }, [isMenuOpen])
 
   return (
     <header
@@ -59,7 +65,7 @@ function Header({ onLinkClick, sections = [] }) {
               </li>
               <li
                 onClick={() => handleMenuClick("#section-how-it-works")}
-                className="cursor-pointer sm:mt-auto"
+                className="cursor-pointer sm:mt-8"
               >
                 How it works
               </li>
