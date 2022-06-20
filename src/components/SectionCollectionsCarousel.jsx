@@ -7,6 +7,7 @@ const settings = {
   dots: false,
   infinite: true,
   arrows: false,
+  adaptiveHeight: true,
   variableWidth: true,
   slidesToScroll: 1,
   // slidesToShow: 4,

@@ -8,12 +8,13 @@ const useEmailTextField = onSuccess => {
     e.preventDefault()
     const email = inputRef.current.value.trim().toLowerCase()
 
+    setErrorMessage('')
+
     if (email.length === 0) {
       setErrorMessage('Please enter an email address')
       return
     }
 
-    setErrorMessage('')
     try {
       const res = await fetch('https://nftsstack.io/api/v1/sendEmail', {
         method: 'POST',
@@ -24,11 +25,6 @@ const useEmailTextField = onSuccess => {
           email
         })
       })
-
-      console.log('res: ', res)
-
-      // 406 invalid email
-      // 407 arden bani meja
 
       if (res.status === 202) {
         onSuccess()
