@@ -1,21 +1,21 @@
-import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const SectionTestimonials = ({
-  itemImage,
-  itemDescription,
-  // itemName,
-  itemCompany,
-}) => {
+                               itemImage,
+                               itemDescription,
+                               // itemName,
+                               itemCompany
+                             }) => {
   return (
-    <div className="content flex">
+    <div className="content flex space-x-4 sm:space-x-0 sm:flex-col sm:space-y-6">
       <GatsbyImage
-        className="min-w-[200px] lg:w-[60px] rounded-[20px] border-philippine-silver"
+        className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] rounded-[20px] border-philippine-silver"
         alt={itemCompany}
         image={getImage(itemImage)}
       />
 
-      <div className='ml-6'>
+      <div>
         <p className="font-semibold text-granite-gray">
           “ {itemDescription} “
         </p>
