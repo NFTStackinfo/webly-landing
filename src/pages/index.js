@@ -14,7 +14,7 @@ import { useSEO } from "../fetchHooks/useSEO"
 import SectionFeatures from '../components/SectionFeatures'
 
 const Landlords = () => {
-  const [showModal, setShowModal] = useState(true)
+  const [showModal, setShowModal] = useState(false)
   const { metaTitle, metaDescription } = useSEO()
   const howItWorksRef = useRef(null)
   const teamRef = useRef(null)

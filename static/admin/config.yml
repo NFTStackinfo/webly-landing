@@ -1,7 +1,7 @@
 backend:
-#    name: git-gateway
-    name: github
-    repo: NFTStackinfo/webly-landing
+    name: git-gateway
+#    name: github
+#    repo: NFTStackinfo/webly-landing
     branch: develop
 
 #publish_mode: editorial_workflow
@@ -148,7 +148,6 @@ collections:
     label: Homepage features
     folder: src/markdown/homepage-features
     preview_path: /
-    create: true
     editor:
       preview: false
     fields:
