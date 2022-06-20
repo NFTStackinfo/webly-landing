@@ -15,23 +15,23 @@ list:
     itemDescription: Co-Founder & CTO
     socialList:
       - icon: twitter
-        url: "#"
+        url: "#https://twitter.com/AbrahamChuljyan "
       - icon: linkedin
-        url: "#"
+        url: "#https://www.linkedin.com/in/abrahamchuljyan/"
   - itemImage: /assets/inessa.png
     itemTitle: Inessa
     itemDescription: Partner & Design Lead
     socialList:
       - icon: twitter
-        url: "#"
+        url: "#https://twitter.com/AzatyanInessa"
       - icon: linkedin
-        url: "#"
+        url: "#https://www.linkedin.com/in/inessa-azatyan/ "
   - itemImage: /assets/eduard.png
     itemTitle: Eduard
     itemDescription: Partner & Product Lead
     socialList:
       - icon: twitter
-        url: "#"
-      - url: "#"
+        url: "#https://twitter.com/edhambardzumyan"
+      - url: "#https://www.linkedin.com/in/eduard-hambardzumyan/ "
         icon: linkedin
 ---
