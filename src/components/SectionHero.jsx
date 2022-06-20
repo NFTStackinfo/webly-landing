@@ -16,7 +16,7 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
   return (
     <main
       className="
-        section-hero pt-54 pb-50 rounded-b-section relative
+        section-hero pt-54 pb-50 rounded-b-section relative overflow-hidden
         lg:pb-40 sm:pt-34 sm:pb-18 bg-gradient-3 bg-no-repeat
       "
       id="section-hero"

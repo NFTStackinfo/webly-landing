@@ -11,6 +11,7 @@ import SectionJoin from "../components/SectionJoin"
 import Header from "../components/Header"
 import ModalSuccess from "../components/ModalSuccess"
 import { useSEO } from "../fetchHooks/useSEO"
+import SectionFeatures from '../components/SectionFeatures'
 
 const Landlords = () => {
   const [showModal, setShowModal] = useState(false)
@@ -47,6 +48,8 @@ const Landlords = () => {
         <SectionHero ref={heroRef} toggleModal={toggleModal} />
 
         <SectionCollections />
+
+        <SectionFeatures />
 
         <SectionHowItWorks ref={howItWorksRef} />
 

@@ -1,32 +1,43 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const useEmailTextField = onSuccess => {
-  const [textField, setTextField] = useState("")
-  const [errorMessage, setErrorMessage] = useState("")
+  const [textField, setTextField] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
 
-  const [emailList, setEmailList] = useState([
-    "abo@gmail.com",
-    "eduard@gmail.com",
-    "ashot@gmail.com",
-    "van@gmail.com",
-    "hrach@gmail.com",
-  ])
-
-  const onSubmit = (e, inputRef) => {
+  const onSubmit = async (e, inputRef) => {
     e.preventDefault()
     const email = inputRef.current.value.trim().toLowerCase()
-    setErrorMessage("")
 
-    if (emailList.includes(email)) {
-      setErrorMessage("You already subscribed")
+    setErrorMessage('')
+
+    if (email.length === 0) {
+      setErrorMessage('Please enter an email address')
       return
     }
 
-    setEmailList([...emailList, textField])
-    setTextField("")
-    onSuccess()
+    try {
+      const res = await fetch('https://nftsstack.io/api/v1/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email
+        })
+      })
 
-    // TODO: send email to our email list
+      if (res.status === 202) {
+        onSuccess()
+      } else {
+        setErrorMessage('You are already in waitlist')
+      }
+      console.log('here')
+    } catch (e) {
+      console.log('e: ', e)
+      setErrorMessage('Something went wrong. Please try again later.')
+    }
+
+    setTextField('')
   }
 
   const onChange = e => {
@@ -37,7 +48,7 @@ const useEmailTextField = onSuccess => {
     textField,
     errorMessage,
     onSubmit,
-    onChange,
+    onChange
   }
 }
 
