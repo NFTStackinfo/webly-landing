@@ -23,7 +23,7 @@ function SectionCreators({
         <ul className="grid grid-flow-col gap-2.5 auto-cols-max ml-2">
           {socialList.map(({ icon, url }, idx) => (
             <li key={`${itemTitle}_${idx}`}>
-              <a href={url}>
+              <a href={url} target='_blank' rel='noreferrer'>
                 <Icon name={icon} className="fill-raisin-black" />
               </a>
             </li>

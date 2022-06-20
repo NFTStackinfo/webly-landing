@@ -4,10 +4,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const SectionTestimonials = ({
   itemImage,
   itemDescription,
-  itemName,
+  // itemName,
   itemCompany,
 }) => {
-  console.log(itemImage);
   return (
     <div className="content grid">
       <GatsbyImage
@@ -20,9 +19,9 @@ const SectionTestimonials = ({
         “ {itemDescription} “
       </p>
 
-      <span className="text-body2 font-semibold mt-4 block text-raisin-black">
-        {itemName}
-      </span>
+      {/*<span className="text-body2 font-semibold mt-4 block text-raisin-black">*/}
+      {/*  {itemName}*/}
+      {/*</span>*/}
 
       <span className="text-body3 mt-1 block text-granite-gray">
         {itemCompany}
