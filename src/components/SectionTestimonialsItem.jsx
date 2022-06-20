@@ -10,7 +10,7 @@ const SectionTestimonials = ({
   return (
     <div className="content flex space-x-4 sm:space-x-0 sm:flex-col sm:space-y-6">
       <GatsbyImage
-        className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] rounded-[20px] border-philippine-silver"
+        className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] rounded-[20px] border-philippine-silver shrink-0"
         alt={itemCompany}
         image={getImage(itemImage)}
       />
