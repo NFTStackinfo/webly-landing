@@ -7,9 +7,9 @@ list:
     itemDescription: Co-Founder & CEO
     socialList:
       - icon: twitter
-        url: "#"
+        url: https://twitter.com/V_ghazaryan
       - icon: linkedin
-        url: "#"
+        url: https://www.linkedin.com/in/vanik-ghazaryan/
   - itemImage: /assets/abraham.png
     itemTitle: Abraham
     itemDescription: Co-Founder & CTO
