@@ -12,7 +12,6 @@ list:
     itemTitle: CREATE SMART CONTRACT
     itemDescription: We support ERC 721, ERC 721A and ERC 1155
   - itemImage: /assets/deploy-smart-contract.png
-    itemTitle: DEPLOY SMART CONTRACT
-    itemDescription: Test your smart contract yourself before going live. Then
-      deploy your own smart contract
+    itemTitle: TEST & DEPLOY SMART CONTRACT
+    itemDescription: Test your smart contract yourself before going live
 ---
