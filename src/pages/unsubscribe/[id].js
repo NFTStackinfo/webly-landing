@@ -6,7 +6,7 @@ import Footer from '../../components/unsubscribe/Footer'
 import { StaticImage } from 'gatsby-plugin-image'
 import UnsubscribeCard from '../../components/unsubscribe/UnsubscribeCard'
 
-const Landlords = ({location, data}) => {
+const Unsubscribe = ({location, data}) => {
   const { metaTitle, metaDescription } = useSEO()
   const id = location.pathname.split('/')[2];
 
@@ -44,4 +44,4 @@ const Landlords = ({location, data}) => {
   )
 }
 
-export default Landlords
+export default Unsubscribe

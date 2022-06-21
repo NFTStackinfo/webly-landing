@@ -1,19 +1,22 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const SectionTestimonials = ({
+const SectionTestimonialsItem = ({
                                itemImage,
                                itemDescription,
                                // itemName,
-                               itemCompany
+                               itemCompany,
+                                url
                              }) => {
   return (
     <div className="content flex space-x-4 sm:space-x-0 sm:flex-col sm:space-y-6">
-      <GatsbyImage
-        className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] rounded-[20px] border-philippine-silver shrink-0"
-        alt={itemCompany}
-        image={getImage(itemImage)}
-      />
+      <a href={url} target='_blank' rel='noreferrer' className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] border-philippine-silver shrink-0">
+        <GatsbyImage
+          className="w-full h-full rounded-[20px]"
+          alt={itemCompany}
+          image={getImage(itemImage)}
+        />
+      </a>
 
       <div>
         <p className="font-semibold text-granite-gray">
@@ -34,4 +37,4 @@ const SectionTestimonials = ({
   )
 }
 
-export default SectionTestimonials
+export default SectionTestimonialsItem

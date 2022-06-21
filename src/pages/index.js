@@ -13,7 +13,7 @@ import ModalSuccess from "../components/ModalSuccess"
 import { useSEO } from "../fetchHooks/useSEO"
 import SectionFeatures from '../components/SectionFeatures'
 
-const Landlords = () => {
+const Index = () => {
   const [showModal, setShowModal] = useState(false)
   const { metaTitle, metaDescription } = useSEO()
   const howItWorksRef = useRef(null)
@@ -71,4 +71,4 @@ const Landlords = () => {
   )
 }
 
-export default Landlords
+export default Index

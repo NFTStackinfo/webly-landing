@@ -21,7 +21,7 @@ collections:
     fields:
         - { name: title, label: Title, widget: hidden }
         - { name: metaTitle, label: Meta Title }
-        - { name: metaDescription, label: Meta Description }
+        - { name: metaDescription, label: Meta Description, widget: text }
         - { name: author, label: Author }
 
   - name: socialLinks
@@ -73,7 +73,7 @@ collections:
         fields:
           - { label: Item image, name: itemImage , widget: image }
           - { label: Item title, name: itemTitle }
-          - { label: Item description, name: itemDescription }
+          - { label: Item description, name: itemDescription, widget: text }
 
   - name: homepage-team
     label: Homepage Team
@@ -91,7 +91,7 @@ collections:
         fields:
           - { label: Item image, name: itemImage , widget: image }
           - { label: Item title, name: itemTitle }
-          - { label: Item description, name: itemDescription }
+          - { label: Item description, name: itemDescription, widget: text }
           - name: socialList
             label: Social list
             widget: list
@@ -143,6 +143,7 @@ collections:
           - { label: Partner image, name: itemImage , widget: image }
           - { label: Partner company , name: itemCompany }
           - { label: Partner Description, name: itemDescription, widget: text }
+          - { label: Partner url, name: url }
 
   - name: homepage-features
     label: Homepage features
