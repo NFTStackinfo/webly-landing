@@ -10,9 +10,9 @@ const SectionTestimonialsItem = ({
                              }) => {
   return (
     <div className="content flex space-x-4 sm:space-x-0 sm:flex-col sm:space-y-6">
-      <a href={url} target='_blank' rel='noreferrer' className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] border-philippine-silver shrink-0">
+      <a href={url} target='_blank' rel='noreferrer' className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] rounded-[20px] overflow-hidden webkit-mask-image shrink-0">
         <GatsbyImage
-          className="w-full h-full rounded-[20px]"
+          className="w-full h-full"
           alt={itemCompany}
           image={getImage(itemImage)}
         />
