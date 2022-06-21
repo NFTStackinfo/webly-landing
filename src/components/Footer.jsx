@@ -63,15 +63,7 @@ const Footer = ({ onLinkClick }) => {
             </span>
           </div>
 
-          <div className="w-full flex justify-center">
-            <img
-              className="max-w-[134px]"
-              src="/assets/certik.png"
-              alt="CERTIK"
-            />
-          </div>
-
-          <ul className="flex justify-end space-x-3 w-full sm:space-x-2 sm:justify-center">
+          <ul className="flex justify-center space-x-3 w-full sm:space-x-2">
             {socialList.map(({ icon, url }) => {
               return (
                 <li key={icon}>
@@ -80,6 +72,14 @@ const Footer = ({ onLinkClick }) => {
               )
             })}
           </ul>
+
+          <div className="w-full flex justify-end sm:justify-center">
+            <img
+              className="max-w-[134px]"
+              src="/assets/certik.png"
+              alt="CERTIK"
+            />
+          </div>
         </div>
       </div>
     </footer>
