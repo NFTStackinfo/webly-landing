@@ -8,12 +8,14 @@ list:
       full control of our smart contract choices. "
     itemCompany: Racing Social Club
     itemName: .
+    url: https://twitter.com/racingsocialnft
   - itemImage: /assets/sneaker-heads.jpg
     itemName: .
     itemCompany: Sneaker Heads
     itemDescription: "At Webly, they innovate by starting with the customer and
       working backward. We loved how all our needs were met and how simple it
       was to use their product.       "
+    url: https://twitter.com/sneakerheadsoff
   - itemImage: /assets/ynsewaax_400x400.jpg
     itemName: .
     itemCompany: MetaMoguls
@@ -21,12 +23,14 @@ list:
       to detail. They made it super easy for us to embed the minting button on
       our website. They make the entire process short and hassle free so that we
       don’t need to spend endless hours of back and forth. "
+    url: https://twitter.com/m3tamoguls
   - itemCompany: Supreme Kong
     itemImage: /assets/supreme-kong.jpg
     itemDescription: "We felt very safe and secure using Webly. We are grateful to
       Webly.pro for providing an affordable and user-friendly platform. We are
       so happy we ended up using them to launch our project. "
     itemName: .
+    url: https://twitter.com/Supremekongnft
   - itemCompany: Big Cats
     itemImage: /assets/big-cats.jpg
     itemDescription: We had our art but were worried about the coding & development
@@ -35,4 +39,5 @@ list:
       period of time we had our smart contract ready to deploy and our project
       was ready to launch.
     itemName: .
+    url: https://mobile.twitter.com/bigcats_nft
 ---
