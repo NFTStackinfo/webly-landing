@@ -6,5 +6,5 @@ socialList:
   - url: https://twitter.com/3Webly
     icon: twitter
   - icon: linkedin
-    url: https://www.linkedin.com/company/86343187/
+    url: https://www.linkedin.com/company/3webly/
 ---
