@@ -69,7 +69,10 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21303421.js"/>
+
+    </Helmet>
   )
 }
 
