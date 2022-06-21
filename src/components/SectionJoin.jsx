@@ -20,7 +20,7 @@ const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
       ref={ref}
       id="section-join"
     >
-      <div className="wrapper rounded-t-section">
+      <div className="wrapper rounded-t-section relative z-2">
         <div className="wrapper-join pt-30 pb-40 sm:pb-36 sm:pt-20">
           <div className="container-sm">
             <div className="content text-center relative z-10">
