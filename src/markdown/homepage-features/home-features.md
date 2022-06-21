@@ -16,6 +16,6 @@ list:
   - itemHeading: Protect your collection
     itemDescription: >
       With deploying your own Smart Contract, the control is in your hands. With
-      a secure and reliable system only you have access to your codes
+      a secure and reliable system only you have access to your codes.
     itemImage: /assets/protect-your-collection.png
 ---
