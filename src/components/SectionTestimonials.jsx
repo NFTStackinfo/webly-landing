@@ -18,7 +18,7 @@ const SectionTestimonials = props => {
     pauseOnHover: false,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 10000,
 
     responsive: [
       {
