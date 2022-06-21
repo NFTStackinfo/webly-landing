@@ -28,7 +28,7 @@ function TextField({
         <Button variant="primary">{buttonText}</Button>
       </form>
 
-      {helperText && <span className="helper-text">{helperText}</span>}
+      {helperText && <p className="helper-text">{helperText}</p>}
     </div>
   )
 }
