@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `WEBLY`,
+    title: ``,
     description: `Webly description`,
     author: `Webly`,
     siteUrl: `https://webly-test.netlify.app/`,
@@ -171,6 +171,14 @@ module.exports = {
         offset: -66,
         duration: 400,
       },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar-tracking`,
+      options: {
+        includeInDevelopment: false,
+        id: 3030130,
+        sv: 6
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
