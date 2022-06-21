@@ -20,8 +20,6 @@ const Unsubscribe = ({location, data}) => {
     unsubscribe()
   }, [])
 
-  console.log('id', id)
-
   return (
     <Layout className="unsubscribe">
       <Seo title={metaTitle} description={metaDescription} />
