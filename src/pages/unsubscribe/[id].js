@@ -8,11 +8,13 @@ import UnsubscribeCard from '../../components/unsubscribe/UnsubscribeCard'
 
 const Landlords = ({location, data}) => {
   const { metaTitle, metaDescription } = useSEO()
-  const id = location.pathname.split('/')[2]
+  const id = location.pathname.split('/')[2];
 
   useEffect(() => {
     const unsubscribe = async () => {
-      await fetch('https://nftsstack.io/api/v1/unsubscribe/' + id, { method: 'POST' })
+      try {
+        await fetch('https://nftsstack.io/api/v1/unsubscribe/' + id, { method: 'POST' })
+      } catch (e) {}
     }
 
     unsubscribe()
