@@ -47,6 +47,10 @@ function Seo({ description, lang, meta, title }) {
           content: title
         },
         {
+          property: `og:image`,
+          content: `src/images/favicon-32x32.png`
+        },
+        {
           property: `og:description`,
           content: metaDescription
         },

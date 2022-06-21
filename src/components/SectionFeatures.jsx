@@ -19,15 +19,16 @@ const SectionHowItWorks = forwardRef((props, ref) => {
             </div>
           </div>
 
-          <div className="content grid grid-cols-3 gap-6 mt-12 md:gap-4 sm:grid-cols-1 sm:justify-items-center">
+          <div  className="content grid grid-cols-3 gap-6 mt-12 md:gap-4 sm:grid-cols-1 sm:justify-items-center">
             {list.map(({ itemImage, itemHeading, itemDescription }, index) => {
               return (
-                <SectionFeaturesCard
-                  key={index}
-                  img={itemImage}
-                  title={itemHeading}
-                  description={itemDescription}
-                />
+                  <SectionFeaturesCard
+                    delay={index * 500}
+                    key={index}
+                    img={itemImage}
+                    title={itemHeading}
+                    description={itemDescription}
+                  />
               )
             })}
           </div>

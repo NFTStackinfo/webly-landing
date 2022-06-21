@@ -8,6 +8,7 @@ export const useTestimonials = () => {
           list {
             itemCompany
             itemDescription
+            url
             itemImage {
               childImageSharp {
                 gatsbyImageData

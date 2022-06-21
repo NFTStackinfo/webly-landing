@@ -8,6 +8,7 @@ const SectionTestimonialsItem = ({
                                itemCompany,
                                 url
                              }) => {
+
   return (
     <div className="content flex space-x-4 sm:space-x-0 sm:flex-col sm:space-y-6">
       <a href={url} target='_blank' rel='noreferrer' className="max-w-[200px] max-h-[200px] w-full h-full sm:max-w-[60px] border-philippine-silver shrink-0">
