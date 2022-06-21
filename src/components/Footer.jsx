@@ -8,6 +8,10 @@ const links = [
     to: "#section-hero",
   },
   {
+    name: "Why webly",
+    to: "#section-features",
+  },
+  {
     name: "How it works",
     to: "#section-how-it-works",
   },
@@ -30,7 +34,7 @@ const Footer = ({ onLinkClick }) => {
           <ul
             className="
           flex space-x-8 text-body2 font-semibold
-          sm:flex-col sm:space-y-4 sm:space-x-0 sm:text-center
+          sm:flex-col sm:space-y-4 sm:space-x-0 sm:text-center uppercase
           "
           >
             {links.map(({ name, to }) => (

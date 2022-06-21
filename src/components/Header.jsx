@@ -49,7 +49,7 @@ function Header({ onLinkClick, sections = [] }) {
 
             <Button
               className="hidden sm:flex"
-              suffixIcon="menu"
+              suffixIcon={isMenuOpen ? 'close' : 'menu'}
               variant="secondary"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             />

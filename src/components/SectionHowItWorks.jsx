@@ -25,9 +25,10 @@ const SectionHowItWorks = forwardRef((props, ref) => {
           </div>
 
           <div className="content grid grid-cols-3 gap-6 mt-8 md:gap-4 sm:grid-cols-1 sm:justify-items-center">
-            {howItWorksList.map(({ itemTitle, itemDescription, itemImage }) => {
+            {howItWorksList.map(({ itemTitle, itemDescription, itemImage }, index) => {
               return (
                 <SectionHowItWorksCard
+                  key={index}
                   img={itemImage}
                   title={itemTitle}
                   description={itemDescription}
