@@ -26,14 +26,17 @@ const useEmailTextField = onSuccess => {
         })
       })
 
-      if (res.status === 202) {
+      const data = await res.json()
+
+      if (data?.success) {
         onSuccess()
-      } else {
+      } else if (data.msg === 'Invalid email') {
+        setErrorMessage('Invalid email address')
+      } else if (data.msg === 'Email already in waitlist') {
         setErrorMessage('You are already in waitlist')
       }
-      console.log('here')
     } catch (e) {
-      console.log('e: ', e)
+      console.error('e: ', e)
       setErrorMessage('Something went wrong. Please try again later.')
     }
 
