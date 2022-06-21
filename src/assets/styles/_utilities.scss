@@ -31,5 +31,9 @@
     &-1 { @apply bg-gradient-1; }
     &-2 { @apply bg-gradient-2; }
   }
+
+  .webkit-mask-image {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+  }
 }
 
