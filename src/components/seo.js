@@ -39,6 +39,22 @@ function Seo({ description, lang, meta, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
+          name: `description`,
+          content: metaDescription
+        },
+        {
+          name: `author`,
+          content: site.siteMetadata?.author || ``
+        },
+        {
+          property: `og:title`,
+          content: title
+        },
+        {
+          property: `og:description`,
+          content: metaDescription
+        },
+        {
           property: `og:type`,
           content: `website`
         },
@@ -47,28 +63,8 @@ function Seo({ description, lang, meta, title }) {
           content: `Webly`
         },
         {
-          property: `twitter:card`,
-          content: `summary_large_image`
-        },
-        {
-          property: `og:title`,
-          content: title
-        },
-        {
           property: `og:image`,
           content: `https://webly-test.netlify.app/assets/webly-meta-preview.jpg`
-        },
-        {
-          property: `og:description`,
-          content: metaDescription
-        },
-        {
-          name: `description`,
-          content: metaDescription
-        },
-        {
-          name: `author`,
-          content: site.siteMetadata?.author || ``
         },
         {
           name: `twitter:creator`,
@@ -81,7 +77,11 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription
-        }
+        },
+        {
+          name: `twitter:card`,
+          content: `summary_large_image`
+        },
       ].concat(meta)}
     >
       {pathname === "/" &&
