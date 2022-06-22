@@ -13,9 +13,9 @@ const ModalSuccess = ({ show = false, toggleModal }) => {
   }
 
   const socialButtonText = icon => {
-    if (icon === 'twitter') {
-      return 'Follow us on Twitter'
-    } else return 'Join our Discord'
+    if (icon === 'twitter') return 'Follow us on Twitter'
+    else if (icon === 'discord') return 'Join our Discord'
+    else if (icon === 'linkedin') return 'Follow us on Linkedin'
   }
 
   return (
