@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-remark-twitter-cards`,
       options: {
-        background: require.resolve('images/webly-meta-preview.jpg'), // path to 1200x630px file or hex code, defaults to black (#000000)
+        background: require.resolve('./static/assets/webly-meta-preview.jpg'), // path to 1200x630px file or hex code, defaults to black (#000000)
       },
     },
     `gatsby-plugin-netlify-cms`,
