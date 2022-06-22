@@ -39,8 +39,16 @@ function Seo({ description, lang, meta, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
-          name: `description`,
-          content: metaDescription
+          property: `og:type`,
+          content: `website`
+        },
+        {
+          property: `og:site_name`,
+          content: `Webly`
+        },
+        {
+          property: `twitter:card`,
+          content: `summary_large_image`
         },
         {
           property: `og:title`,
@@ -48,23 +56,19 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `/assets/webly-meta-preview.jpg`
-        },
-        {
-          property: 'og:image:alt',
-          content: 'Webly'
+          content: `https://webly-test.netlify.app/assets/webly-meta-preview.jpg`
         },
         {
           property: `og:description`,
           content: metaDescription
         },
         {
-          property: `og:type`,
-          content: `website`
+          name: `description`,
+          content: metaDescription
         },
         {
-          name: `twitter:card`,
-          content: `summary`
+          name: `author`,
+          content: site.siteMetadata?.author || ``
         },
         {
           name: `twitter:creator`,
