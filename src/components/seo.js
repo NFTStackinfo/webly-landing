@@ -64,7 +64,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `/assets/webly-meta-preview.jpg`
+          content: `https://webly-test.netlify.app/assets/webly-meta-preview.jpg`
         },
         {
           name: `twitter:creator`,
@@ -84,7 +84,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `/assets/webly-meta-preview.jpg`
+          content: `https://webly-test.netlify.app/assets/webly-meta-preview.jpg`
         },
       ].concat(meta)}
     >
