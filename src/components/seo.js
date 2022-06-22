@@ -48,7 +48,11 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `src/images/favicon-32x32.png`
+          content: `assets/webly-meta-preview.jpg`
+        },
+        {
+          property: 'og:image:alt',
+          content: 'Webly'
         },
         {
           property: `og:description`,
@@ -61,6 +65,10 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:card`,
           content: `summary`
+        },
+        {
+          property: `twitter:image`,
+          content: `assets/webly-meta-preview.jpg`
         },
         {
           name: `twitter:creator`,
