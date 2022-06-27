@@ -1,22 +1,8 @@
 import React from 'react'
-import Slider from 'react-slick'
 import { useCollections } from '../fetchHooks/useCollections'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
-const settings = {
-  dots: false,
-  infinite: true,
-  arrows: false,
-  adaptiveHeight: true,
-  variableWidth: true,
-  slidesToScroll: 1,
-  // slidesToShow: 4,
-  autoplay: true,
-  pauseOnHover: false,
-  autoplaySpeed: 0,
-  speed: 3000,
-  cssEase: 'linear'
-}
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper'
 
 const SectionCollectionsCarousel = () => {
   const { list } = useCollections()
@@ -24,21 +10,35 @@ const SectionCollectionsCarousel = () => {
   const enlargedList = [...list, ...list, ...list]
   return (
     <>
-      <Slider {...settings}>
+      <Swiper
+        slidesPerView={'auto'}
+        loop={true}
+        speed={4000}
+        spaceBetween={16}
+        autoplay={{
+          delay: 1,
+          enabled: true,
+          reverseDirection: true
+        }}
+        rewind={false}
+
+        modules={[Autoplay]}
+        className="collection-carousel"
+      >
         {enlargedList.map(({ itemImage, itemName, url }, index) => (
-          <div key={index} className="pr-6">
-            <a href={url} target="_blank" rel="noreferrer"
-               className="block rounded-[30px] webkit-mask-image overflow-hidden">
-              <GatsbyImage
-                className="block max-w-full w-full max-w-[350px]"
-                alt={itemName}
-                image={getImage(itemImage)}
-                objectFit={'contain'}
-              />
-            </a>
-          </div>
+          <SwiperSlide key={index}>
+          <a href={url} target="_blank" rel="noreferrer"
+             className="block rounded-[30px] max-w-full webkit-mask-image overflow-hidden">
+            <GatsbyImage
+              className="block max-w-full w-full"
+              alt={itemName}
+              image={getImage(itemImage)}
+              objectFit={'contain'}
+            />
+          </a>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </>
   )
 }
