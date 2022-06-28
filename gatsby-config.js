@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
-    description: `Webly description`,
+    title: `No-Code NFT Smart Contracts`,
+    description: `No-code Smart Contract solution for individual artists &
+  brands. Deploy your own NFT smart contracts in 2 mins!`,
     author: `Webly`,
     siteUrl: `https://webly-test.netlify.app/`,
   },

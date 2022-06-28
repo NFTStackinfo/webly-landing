@@ -151,4 +151,15 @@
       }
     }
   }
+
+  .swiper.collection-carousel {
+    .swiper-slide {
+      @apply max-w-[350px] sm:max-w-[328px]
+    }
+
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
 }
