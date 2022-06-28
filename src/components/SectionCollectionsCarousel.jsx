@@ -18,7 +18,7 @@ const SectionCollectionsCarousel = () => {
         autoplay={{
           delay: 1,
           enabled: true,
-          reverseDirection: true
+          // reverseDirection: true
         }}
         rewind={false}
 
