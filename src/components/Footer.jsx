@@ -59,7 +59,7 @@ const Footer = ({ onLinkClick }) => {
             <img src="/assets/logo.svg" alt="WEBLY" className="max-w-[80px] w-full" />
 
             <span className="text-caption ml-2.5">
-              ©All rights reserved. 2022
+              ©All rights reserved. {new Date().getFullYear()}
             </span>
           </div>
 
