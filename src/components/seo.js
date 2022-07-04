@@ -90,7 +90,7 @@ function Seo({ description, lang, meta, title }) {
     >
       {pathname === "/" &&
       <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21303421.js" />}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY8445XMPN"/>
+      {/*<script async src="https://www.googletagmanager.com/gtag/js?id=G-XY8445XMPN"/>*/}
     </Helmet>
   )
 }
