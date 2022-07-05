@@ -86,6 +86,10 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:image`,
           content: `https://webly-test.netlify.app/assets/webly-meta-preview.jpeg`
         },
+        {
+          name: `facebook-domain-verification`,
+          content: `g09kh55jz3qaadbqvxqq6ynsto6ue0`
+        },
       ].concat(meta)}
     >
       {pathname === "/" &&
