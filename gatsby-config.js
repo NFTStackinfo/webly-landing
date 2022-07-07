@@ -7,14 +7,11 @@ module.exports = {
     siteUrl: `https://webly-test.netlify.app/`,
   },
   plugins: [
-    // Make sure this plugin is first in the array of plugins
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        trackingId: "G-XY8445XMPN",
-        // this option places the tracking script into the head of the DOM
-        head: true,
-        // other options
+        id: "GTM-N5TQJ75",
+        includeInDevelopment: false,
       },
     },
     `gatsby-plugin-netlify-cms`,
@@ -207,17 +204,6 @@ module.exports = {
         exitEventName: 'sal:out', // Exit event name
       }
     },
-    // {
-    //   resolve: "gatsby-plugin-google-tagmanager",
-    //   options: {
-    //     id: "G-XY8445XMPN",
-    //     // Include GTM in development.
-    //     // Defaults to false meaning GTM will only be loaded in production.
-    //     includeInDevelopment: false,
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
