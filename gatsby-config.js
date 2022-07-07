@@ -200,12 +200,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "G-XY8445XMPN",
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
+        id: "GTM-5V42WP3",
         includeInDevelopment: false,
+        enableWebVitalsTracking: true,
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
