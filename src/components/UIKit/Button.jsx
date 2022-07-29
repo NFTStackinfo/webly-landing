@@ -4,6 +4,7 @@ import { Icon } from "./index"
 function Button({
   children,
   link,
+  newTab = true,
   disabled = false,
   onClick,
   className = "",
@@ -25,7 +26,7 @@ function Button({
             children ? "px-6" : "px-3",
             className,
           ].join(" ")}
-          target="_blank"
+          target={newTab ? "_blank" : "_self"}
           rel="noopener noreferrer"
           {...props}
         >
