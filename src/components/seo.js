@@ -86,11 +86,15 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:image`,
           content: `https://webly.pro/assets/webly-meta-preview.jpeg`
         },
+        {
+          name: `facebook-domain-verification`,
+          content: `g09kh55jz3qaadbqvxqq6ynsto6ue0`
+        },
       ].concat(meta)}
     >
       {pathname === "/" &&
       <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21303421.js" />}
-
+      {/*<script async src="https://www.googletagmanager.com/gtag/js?id=G-XY8445XMPN"/>*/}
     </Helmet>
   )
 }

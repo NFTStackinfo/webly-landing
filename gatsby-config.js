@@ -7,6 +7,13 @@ module.exports = {
     siteUrl: `https://webly.pro/`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-N5TQJ75",
+        includeInDevelopment: false,
+      },
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -198,15 +205,11 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        id: "GTM-WWDS4DV",
-        includeInDevelopment: false,
+        pixelId: "1537741193344907",
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     "gatsby-plugin-netlify",
   ],
