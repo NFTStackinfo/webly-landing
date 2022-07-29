@@ -1,17 +1,10 @@
 import React, { forwardRef } from "react"
-import { TextField } from "./UIKit"
+import { Button } from './UIKit'
 import { useHomepageHero } from "../fetchHooks/useHomepageHero"
-import useEmailTextField from "../hooks/useEmailTextField"
 import { StaticImage } from 'gatsby-plugin-image'
 
-const SectionHero = forwardRef(({ toggleModal }, ref) => {
-  const { sectionHeading, sectionText, sectionBtnText } = useHomepageHero()
-  const { textField, onSubmit, onChange, errorMessage } =
-    useEmailTextField(onSuccess)
-
-  function onSuccess() {
-    toggleModal(true)
-  }
+const SectionHero = forwardRef(({ }, ref) => {
+  const { sectionHeading, sectionText } = useHomepageHero()
 
   return (
     <main
@@ -30,14 +23,12 @@ const SectionHero = forwardRef(({ toggleModal }, ref) => {
 
           <p className="mt-4">{sectionText}</p>
 
-          <TextField
-            className="mx-auto mt-12 sm:mt-8"
-            onChange={onChange}
-            value={textField}
-            onSubmit={onSubmit}
-            helperText={errorMessage}
-            buttonText={sectionBtnText}
-          />
+          <Button
+            variant="secondary black"
+            link="https://app.webly.pro/"
+            newTab={false}
+            className="w-fit mx-auto mt-3"
+          >Go to dashboard</Button>
         </div>
       </div>
 

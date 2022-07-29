@@ -1,18 +1,11 @@
 import React, { forwardRef } from "react"
-import { TextField } from "./UIKit"
+import { Button } from './UIKit'
 import { useJoinUs } from "../fetchHooks/useJoinUs"
 import Footer from "./Footer"
-import useEmailTextField from "../hooks/useEmailTextField"
 import { StaticImage } from 'gatsby-plugin-image'
 
-const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
+const SectionJoin = forwardRef(({ onLinkClick }, ref) => {
   const { sectionHeading, sectionText } = useJoinUs()
-  const { textField, onSubmit, onChange, errorMessage } =
-    useEmailTextField(onSuccess)
-
-  function onSuccess() {
-    toggleModal(true)
-  }
 
   return (
     <section
@@ -30,13 +23,12 @@ const SectionJoin = forwardRef(({ onLinkClick, toggleModal }, ref) => {
 
               <p className="mt-2">{sectionText}</p>
 
-              <TextField
-                onChange={onChange}
-                value={textField}
-                onSubmit={onSubmit}
-                helperText={errorMessage}
-                className="mx-auto mt-12"
-              />
+              <Button
+                variant="secondary black"
+                link="https://app.webly.pro/"
+                newTab={false}
+                className="w-fit mx-auto mt-12"
+              >Go to dashboard</Button>
             </div>
           </div>
         </div>

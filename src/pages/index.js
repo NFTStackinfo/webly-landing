@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef } from "react"
 import scrollIntoView from "scroll-into-view"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,12 +9,10 @@ import SectionTestimonials from "../components/SectionTestimonials"
 import SectionCreators from "../components/SectionCreators"
 import SectionJoin from "../components/SectionJoin"
 import Header from "../components/Header"
-import ModalSuccess from "../components/ModalSuccess"
 import { useSEO } from "../fetchHooks/useSEO"
 import SectionFeatures from '../components/SectionFeatures'
 
 const Index = () => {
-  const [showModal, setShowModal] = useState(false)
   const { metaTitle, metaDescription } = useSEO()
   const howItWorksRef = useRef(null)
   const teamRef = useRef(null)
@@ -38,16 +36,12 @@ const Index = () => {
     })
   }
 
-  const toggleModal = isActive => {
-    setShowModal(isActive)
-  }
-
   return (
     <Layout className="landing">
       <Seo title={metaTitle} description={metaDescription} />
       <div className="main-wrapper">
         <Header onLinkClick={handleScrollIntoView} sections={[heroRef]} />
-        <SectionHero ref={heroRef} toggleModal={toggleModal} />
+        <SectionHero ref={heroRef} />
 
         <SectionCollections />
 
@@ -62,10 +56,7 @@ const Index = () => {
         <SectionJoin
           ref={joinRef}
           onLinkClick={handleScrollIntoView}
-          toggleModal={toggleModal}
         />
-
-        <ModalSuccess show={showModal} toggleModal={toggleModal} />
       </div>
     </Layout>
   )
