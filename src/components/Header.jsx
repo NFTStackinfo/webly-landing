@@ -81,9 +81,9 @@ function Header({ onLinkClick, sections = [] }) {
                 <Button
                   variant="secondary black"
                   suffixIcon="arrow-forward"
-                  onClick={() => handleMenuClick("#section-join")}
+                  link="https://app.webly.pro/"
                 >
-                  Join the waitlist
+                  Dashboard
                 </Button>
               </li>
             </ul>
