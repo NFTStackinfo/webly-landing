@@ -82,6 +82,7 @@ function Header({ onLinkClick, sections = [] }) {
                   variant="secondary black"
                   suffixIcon="arrow-forward"
                   link="https://app.webly.pro/"
+                  newTab={false}
                 >
                   Dashboard
                 </Button>

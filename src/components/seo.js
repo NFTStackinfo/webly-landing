@@ -64,7 +64,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://webly.pro/assets/webly-meta-preview.jpeg`
+          content: `https://webly.pro/assets/share-image-min.png`
         },
         {
           name: `twitter:creator`,
