@@ -4,7 +4,7 @@ module.exports = {
     description: `No-code Smart Contract solution for individual artists &
   brands. Deploy your own NFT smart contracts in 2 mins!`,
     author: `Webly`,
-    siteUrl: `https://webly-test.netlify.app/`,
+    siteUrl: `https://webly.pro/`,
   },
   plugins: [
     {
@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://webly-test.netlify.app/",
-        sitemap: "https://webly-test.netlify.app/sitemap.xml",
+        host: "https://webly.pro/",
+        sitemap: "https://webly.pro/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
